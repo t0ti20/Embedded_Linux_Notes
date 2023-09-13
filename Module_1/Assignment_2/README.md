@@ -2,6 +2,8 @@
 
 The File Organizer is a Bash script that allows you to automatically organize files in a specified directory based on their file types into separate subdirectories. This helps in keeping your directories clean and tidy by sorting files into appropriate categories.
 
+![Screenshot 2023-09-13 155310](https://github.com/t0ti20/Embedded_Linux/assets/61616031/5b4cabac-40a3-420d-98fc-8035b151bd18)
+
 ## Features
 
 - Organizes files based on their file extensions into separate subdirectories.
@@ -12,8 +14,8 @@ The File Organizer is a Bash script that allows you to automatically organize fi
 
 ## Usage
 
-1. Run the script and provide the directory path as an argument:./file_organizer.sh <directory-path>
-Replace `<directory-path>` with the path to the directory you want to organize.
+1. Run the script and provide the directory path as an argument:
+   ./file_organizer.sh <directory-path>  Replace `<directory-path>` with the path to the directory you want to organize.
 
 2. The script will organize the files in the specified directory based on their file types into separate subdirectories. The organized files will be placed in a directory called "Result" within the current directory.
 
@@ -50,10 +52,3 @@ Downloads/
 
 Contributions to the File Organizer project are always welcome! If you find any issues or want to add new features, please feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-```
-
-Feel free to modify the README file further to suit your preferences and provide any additional information you deem necessary.
