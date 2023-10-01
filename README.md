@@ -15,5 +15,7 @@
 - **SHELL**
   - 📜 [Assignment 2 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_2)
 
+- **Access Control**
+  - 📜 [Assignment 3 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_3)
 ---
 
