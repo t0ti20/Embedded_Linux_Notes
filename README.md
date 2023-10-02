@@ -6,10 +6,10 @@
 
 ### Topics and Assignments
 
-- **Layered Architecture** 
-  - 📜 Assignment: *No Assignment*
-
 - **System Calls and Process Management**
+  - 📜 [Assignment 0 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_0)
+
+- **Filesystems**
   - 📜 [Assignment 1 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_1)
 
 - **SHELL**
