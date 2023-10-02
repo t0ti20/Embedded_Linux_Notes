@@ -2,7 +2,7 @@
 
 ---
 
-## 📘 **Module 1 (Kernel)** ![image](https://progress-bar.dev/5/?title=Progress&color=blue)
+## 📘 **Module 1 (Kernel)** ![image](https://progress-bar.dev/10/?title=Progress&color=blue)
 
 ### Topics and Assignments
 
@@ -12,10 +12,11 @@
 - **Filesystems**
   - 📜 [Assignment 1 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_1)
 
-- **SHELL**
+- **Networking**
   - 📜 [Assignment 2 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_2)
 
-- **Access Control**
+- **SHELL**
   - 📜 [Assignment 3 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_3)
----
 
+- **Access Control**
+  - 📜 [Assignment 3 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_4)
