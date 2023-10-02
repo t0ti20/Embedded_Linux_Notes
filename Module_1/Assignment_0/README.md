@@ -1,4 +1,4 @@
-# 🚀 Kernel Module Exploration: M1-S2-A1 🚀
+# 🚀 Kernel Module Exploration: M1-S2-A0 🚀
 
 Welcome to the first assignment in our kernel module exploration! Dive into the world of processes, priorities, and cores. Ready to get started?
 
