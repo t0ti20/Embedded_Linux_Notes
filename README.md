@@ -19,4 +19,7 @@
   - 📜 [Assignment 3 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_3)
 
 - **Access Control**
-  - 📜 [Assignment 3 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_4)
+  - 📜 [Assignment 4 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_4)
+
+- **Important Commands**
+  - 📜 [Assignment 5 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_5)
