@@ -23,3 +23,6 @@
 
 - **Important Commands**
   - 📜 [Assignment 5 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_5)
+
+- **To-Do List Shell Script**
+  - 📜 [Assignment 6 📎](https://github.com/t0ti20/Embedded_Linux/tree/master/Module_1/Assignment_6)
