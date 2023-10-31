@@ -20,15 +20,35 @@ test "$Environment_Variable" == "Hello World !";Result=$?;echo The Test Result =
 if [ $Result -eq 0 ];
 then
 echo "Condition Is True"
+else if [ $Result -eq 0 ];
+echo "Condition Is True"
 else
 echo "Condition Is False"
 fi
+#Case Condition
+read -p "Enter a color (red/blue/green): " color
+case $color in
+	red) echo "You chose red!" ;;
+	blue) echo "You chose blue!" ;;
+	green) echo "You chose green!" ;;
+	*) echo "Not a valid choice!" ;;
+esac
 ############################################
 #                   Loops                  #
 #####################a######################
-#For Loop
-# for Counter in {1..3};
+#untill Loop
 Counter=0
+until [ $count -ge 5 ]
+do
+    echo "Count is: $Counter"
+    Counter=$((Counter + 1))
+done
+#For Loop
+Counter=0
+for Counter in {1..99..2};
+do
+done
+#
 for File in $(ls);
 do
      echo Files = $File
