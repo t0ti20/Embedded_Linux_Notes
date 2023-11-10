@@ -1,0 +1,84 @@
+## **Yocto Project Overview:**
+
+The Yocto Project is an open-source collaboration project that equips you with templates, tools, and methods for creating custom Linux-based systems tailored for embedded and IoT devices.
+
+## **Yocto Project Objective:**
+
+- Build a custom embedded Linux distribution using the Yocto Project.
+
+## **Steps to Build a System with Yocto:**
+
+1. **Download Source Code:**
+    - Clone the Yocto Project repository (e.g., Poky).
+    - Initialize the build environment by sourcing the "oe-init-build-env" script.
+    - Choose a target machine and distribution configuration.
+2. **Apply Patches:**
+    - Create a "meta" layer or use existing layers to manage customizations.
+    - Apply patches to recipes or configuration files as needed.
+3. **Build Packages:**
+    - Run the "bitbake" command with the desired recipes and targets.
+    - Yocto will fetch, compile, and build the specified packages and dependencies.
+4. **Create Image:**
+    - Build a custom image using the "bitbake" command and specify the image recipe.
+    - The image can be a minimal image (e.g., core-image-minimal) or customized to your requirements.
+5. **Assemble Root Filesystem:**
+    - Extract the root filesystem from the generated image.
+    - Create a sysroot for cross-compilation if needed.
+6. **Create SDK (Software Development Kit):**
+    - Generate an SDK to facilitate application development and cross-compilation.
+    - Use the "bitbake" command with the "meta-toolchain" target.
+## **Important Terms:**
+
+1. **Bitbake:**
+    Bitbake is the build tool at the core of the Yocto Project. It automates the process of fetching source code, configuring, compiling, and packaging software components to create the final system image. Bitbake recipes define how each component should be built, and Bitbake manages the build tasks and dependencies.
+2. **Recipe:**
+     In Yocto Project terminology, a recipe is a set of instructions that defines how to build a particular software component or package. A recipe includes metadata about the component (source location, license, dependencies) and the necessary tasks to build it. Recipes are written in a domain-specific language and are a fundamental part of customizing a Yocto-based distribution.
+3. **OpenEmbedded:**
+    OpenEmbedded is the build framework upon which the Yocto Project is based. It provides a set of tools and metadata for creating custom Linux distributions. The Yocto Project builds upon OpenEmbedded to create a more user-friendly and well-documented environment for embedded Linux development.
+4. **Layer:**
+	A layer is a collection of metadata, recipes, and configuration files used to extend the functionality and customization of a Yocto Project build. Layers allow you to organize and encapsulate modifications and customizations. Commonly, users create their own custom layers to add specific features or adapt an existing layer to their project.
+1. **Package:**
+    A package refers to a specific software component that can be included in a Yocto-built image. Packages are built from source code, and Yocto manages their dependencies, compilation, and integration into the target system. A Yocto image typically consists of multiple packages, each serving a particular function.
+2. **Sources:**
+    In the context of the Yocto Project, sources refer to the original source code of software components. Yocto is capable of fetching these sources from various locations, including version control systems, archives, or local directories. Sources are specified in recipes and are crucial for the build process, as Bitbake uses them to compile the packages into the desired format for the target system.
+
+## **Pre-Development Operations:**
+### 1-Download Compatible Yocto Project
+
+Before you start building your custom Linux distribution with the Yocto Project, you must select a compatible version of Yocto to work with. Yocto Project releases are labeled with specific versions, and you should choose the version that best suits your needs and matches the hardware and software requirements of your embedded or IoT project.[Link](https://wiki.yoctoproject.org/wiki/Releases)
+
+- To download a compatible Yocto Project release, visit the official Yocto Project website or repository.
+- Ensure that the selected version aligns with your target machine and requirements.
+- Be prepared to work with the tools and features available in that specific Yocto release to achieve your project goals. Each release may have different capabilities and improvements.
+
+Selecting the right Yocto Project version is a crucial first step in your embedded Linux development journey, as it sets the foundation for the rest of your custom distribution build. "make sure that selected release supports the host you are using"
+
+```BASH
+#Clone And Select mickledore Bracnh
+git clone -b mickledore git://git.yoctoproject.org/poky.git
+```
+
+### 2-Configure & Build Hello World Poky Project
+
+As a practical step to test your Yocto environment, you can configure and build a "Hello World" Poky project for the QEMU target. This project serves as a simple test to ensure that your Yocto setup is working correctly and can generate a bootable image.
+
+- Configure the "Hello World" Poky project by selecting the appropriate machine and target configuration.
+- Use Bitbake to build the project by specifying the "hello world" recipe and target image.
+- Deploy and run the generated image on the QEMU emulator to verify that it boots successfully.
+```BASH
+#Source Ycto ENV Variables
+. oe-init-build-env
+#Configure Build Image by changing 
+nano conf/local.conf
+MACHINE ??= "qemuarm64"
+#Build Poky For Qemu
+bitbake core-image-minimal
+#Run Poky Image 
+runqemu nographic qemuarm64
+#Output Image 
+runqemu nographic qemuarm64
+```
+
+## **References**:
+
+1. [Hazem Khaled](https://github.com/embeddedlinuxworkshop/M2-S4/)

@@ -1,0 +1,9 @@
+- definition int x{1};
+- constants constexpr int x{1}; like  `#define`
+- constants constinit int x{1}; ensuring that the initialization of the variable happens during the static initialization phase, preventing potential issues with initialization order or delayed initialization.
+- function overloading
+- if constexpr
+- if and switch with initializer
+- size_t in loops
+- Range Based For Loop with initializer
+- 
