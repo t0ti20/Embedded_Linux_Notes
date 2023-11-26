@@ -4,35 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "1b4c7aee0e014045",
+        "id": "ab763947e8611473",
         "type": "tabs",
         "children": [
           {
-            "id": "06db938a73d45040",
+            "id": "73f9bef0f7ce3fca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commands.md",
+                "file": "C++.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "86ff109fe2c5490b",
+            "id": "b3367c189988fc0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kernal/2-Bash Script.md",
+                "file": "1-Kernal/5-Bash Script.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kernal/2-Bash Script.md",
+                "file": "C++.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kernal/2-Bash Script.md",
+                "file": "C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kernal/2-Bash Script.md"
+                "file": "C++.md"
               }
             }
           },
@@ -170,27 +169,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "86ff109fe2c5490b",
+  "active": "73f9bef0f7ce3fca",
   "lastOpenFiles": [
+    "3-Yocto/2-Development Stage.md",
+    "2-Embedded Linux/5-System Initialization.md",
     "Commands.md",
-    "Kernal/2-Bash Script.md",
-    "Embedded Linux/2-Bootloader.md",
-    "Embedded Linux/1-Tool Chain.md",
-    "Embedded Linux/4-Root File System (Rootfs).md",
-    "Embedded Linux/3-Kernal.md",
-    "Yocto/2-Development Stage.md",
+    "1-Kernal/5-Bash Script.md",
     "Overview.canvas",
-    "Yocto/1-Pre-Development.md",
-    "Yocto",
+    "2-Embedded Linux/4-Root File System (Rootfs).md",
+    "2-Embedded Linux/2-Bootloader.md",
+    "3-Yocto/1-Pre-Development.md",
+    "1-Kernal/3-File System Stack.md",
     "Git Tutorial.md",
+    "2-Embedded Linux/1-Tool Chain.md",
+    "1-Kernal/1-Process Stack & System Calls.md",
+    "2-Embedded Linux/3-Kernal.md",
+    "3-Yocto",
     "C++.md",
     "Kernal/0-Kernal.canvas",
     "Embedded Linux/0-Embedded Linux.canvas",
-    "Kernal/1.4-User Management Stack.md",
-    "Kernal/1.1-Process Stack & System Calls.md",
+    "1-Kernal/4-User Management Stack.md",
     "Untitled.canvas",
     "2023-10-26.md",
-    "Kernal/1.3-File System Stack.md",
     "Materials/Untitled Diagram.drawio.png",
     "Untitled Diagram.jpg",
     "Embedded Linux/Excalidraw/Excalidraw/Drawing 2023-10-25 09.44.48.excalidraw.md",
@@ -203,8 +203,8 @@
     "Embedded Linux/Excalidraw",
     "Embedded Linux/Untitled Kanban 1.md",
     "Embedded Linux/Untitled Kanban.md",
-    "Embedded Linux",
-    "Kernal/1.2-Network Stack.md",
+    "2-Embedded Linux",
+    "1-Kernal/2-Network Stack.md",
     "Kernal/0-Overview",
     "Materials/Pasted image 20231006093644.png",
     "Materials/Pasted image 20231006093635.png",
@@ -218,7 +218,6 @@
     "Pasted image 20231006083942.png",
     "Stacks/Stacks",
     "Stacks/Untitled",
-    "Kernal/1-Stacks",
-    "Kernal/User Managment/Untitled Kanban.md"
+    "Kernal/1-Stacks"
   ]
 }

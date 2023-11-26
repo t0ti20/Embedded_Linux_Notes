@@ -138,6 +138,31 @@ ls [^a]*
 ls {a,b,c}.txt 
 ```
 
+Regular Expressions: A regular expression is a sequence of characters that defines a search pattern.
+
+```BASH
+#Basic (grep)
+#1- . Has .zip After
+grep .zip
+#2- ^ Start With log
+grep ^log
+#3- $ End With log
+grep log$
+#4- [] Anything in set
+grep [abc].log
+grep [^abc].log
+grep [a-z].log
+#5- * Optional zero time or More
+grep *.log
+#Extended (grep -E)
+#2- ? Optional one time or zero
+grep -E "colo?r.log"
+#3- ? Optional one time or more
+grep -E "+r.log"
+#1- | Oring 
+grep -E "(a|b).log"
+```
+
 - **Variables**: Named storage locations used to hold values which can be referenced and manipulated within a script.
 
 ```BASH
@@ -416,6 +441,10 @@ done < File.txt
 #Output To File
 echo -n "Todays Date -> " > Date.txt
 date >> Date.txt
+#File Exist
+if [ -e File.txt ]
+then
+fi
 ```
 
 - **Arithmetic Operations**:
@@ -451,30 +480,6 @@ echo Battary Life : $Result
 #Trim
 Result="100%"
 echo ${Result%?}
-```
-
-- **File Operations**:
-
-```Bash
-if [ -e "filename" ]; then
-   echo "File exists"
-fi
-```
-
-- **Comparison Operations**:
-
-```Bash
-if [ $a -eq $b ]; then
-   echo "a is equal to b"
-fi
-```
-
-- **Logical Operations**:
-
-```Bash
-if [[ $a -lt 20 && $b -gt 10 ]]; then
-   echo "True"
-fi
 ```
 
  - **Exit Operations**:

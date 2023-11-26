@@ -38,7 +38,7 @@ When a user wants to store any data, Linux utilizes a file system stack, central
 
 #### **Filesystem Components**:
 - **/etc/fstab**: Configuration containing all partition and storage device details, automounting them during startup.
-- **/dev**: Houses device nodes, signifying device files.
+- **/dev**: Houses device nodes, signifying device files.(tty "teletypewriter")
 - **/mnt and /media**: Traditional and modern directories for mounting filesystems, respectively.
 
 #### **Additional Concepts**:

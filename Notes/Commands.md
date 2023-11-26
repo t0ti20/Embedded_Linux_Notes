@@ -52,7 +52,7 @@
 - `time`: Measure how long a command took to run.
 - `dd`: Convert and copy a file. (bs= if= of= conv=)
 - `head`: Output the first part of files. (-n)
-- `grep`: Find patterns in files using regular expressions. (-o -E)
+- `grep`: Find patterns in files using regular expressions. (-o -E -i -r -v -n)
 - `stat`: Display file and filesystem information.
 - `ln`: Creates links to files and directories. (-s)
 - `acpi`: Shows battery status or thermal information. (-V)
@@ -62,10 +62,23 @@
 - `uptime`: Tell how long the system has been running and other information.
 - `apropos`: Search the manual pages for names and descriptions.
 - `man`: Format and display manual pages. 
-- `cat`: Print and concatenate files. 
+- `cat`: Print and concatenate files. (-n)
 - `date`:  Set or display the system date. ()
 - `bc`: An arbitrary precision calculator language.
 - `uname`: Print details about the current machine running . (-a)
 - `uptime`: Tell how long the system has been running and other information.
-- `sort`: Sort lines of text files. (-r)
+- `sort`: Sort lines of text files. (-r -n)
 - `spell`: GNU spell, a Unix spell emulator. (-n)
+- `history`: Command-line history.
+- `install`: Copy files and set attributes. (-d -m)
+- `tee`: Read from stdin and write to stdout and files (or commands). ( | tee -a)
+- `tty`: Returns terminal name.
+- `screen`: Hold a session open on a remote server. (-ls -r)
+- `mkfifo`: Makes FIFOs (named pipes).
+- `netcat - nc`: versatile utility for redirecting IO into a network stream. (-l -q)
+- `timeout`: Run a command with a time limit.
+- `more-less`: Open a file for interactive reading, allowing scrolling and search.
+- `head-tail`: Output the first part of files. (-n -f)
+- `touch`: Create files and set access/modification times.
+- `diff`: Compare files and directories. (-r -u -c -n)
+- `patch`: Patch a file (or files) with a diff file. (-R)
