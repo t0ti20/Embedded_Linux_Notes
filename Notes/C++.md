@@ -13,7 +13,7 @@ Main Features:
 2-Can't be changed to reference something else
 3- Must be initialized at declaration
 Example:
-```C++
+```Cpp
 int Variable {100};
 #Reference Syntax
 int &Variable_Alias {Variable};

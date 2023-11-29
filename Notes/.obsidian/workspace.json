@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ab763947e8611473",
+        "id": "4913e7798cd25aea",
         "type": "tabs",
         "children": [
           {
-            "id": "73f9bef0f7ce3fca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b3367c189988fc0c",
+            "id": "4ff7af7816fdb330",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -81,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 250.50260543823242
+    "width": 200
   },
   "right": {
     "id": "f0ca3c6263f55eec",
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++.md",
+                "file": "1-Kernal/5-Bash Script.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++.md",
+                "file": "1-Kernal/5-Bash Script.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++.md"
+                "file": "1-Kernal/5-Bash Script.md"
               }
             }
           },
@@ -169,23 +157,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "73f9bef0f7ce3fca",
+  "active": "4ff7af7816fdb330",
   "lastOpenFiles": [
-    "3-Yocto/2-Development Stage.md",
-    "2-Embedded Linux/5-System Initialization.md",
     "Commands.md",
     "1-Kernal/5-Bash Script.md",
+    "C++.md",
+    "OOP.md",
+    "Git Tutorial.md",
+    "3-Yocto/2-Development Stage.md",
+    "2-Embedded Linux/5-System Initialization.md",
     "Overview.canvas",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
     "2-Embedded Linux/2-Bootloader.md",
     "3-Yocto/1-Pre-Development.md",
     "1-Kernal/3-File System Stack.md",
-    "Git Tutorial.md",
     "2-Embedded Linux/1-Tool Chain.md",
     "1-Kernal/1-Process Stack & System Calls.md",
     "2-Embedded Linux/3-Kernal.md",
     "3-Yocto",
-    "C++.md",
     "Kernal/0-Kernal.canvas",
     "Embedded Linux/0-Embedded Linux.canvas",
     "1-Kernal/4-User Management Stack.md",

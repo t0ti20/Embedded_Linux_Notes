@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabObjectUngroup",
       "IbPlay",
       "RiSettings3Line",
       "LiCoffee",
-      "RiUserSettingsLine",
-      "SiCplusplus"
+      "RiUserSettingsLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -40,5 +40,6 @@
   "2-Embedded Linux/2-Bootloader.md": "SiSpringboot",
   "2-Embedded Linux/3-Kernal.md": "SiLinux",
   "2-Embedded Linux/4-Root File System (Rootfs).md": "LiFiles",
-  "2-Embedded Linux/5-System Initialization.md": "IbPlay"
+  "2-Embedded Linux/5-System Initialization.md": "IbPlay",
+  "OOP.md": "FabObjectUngroup"
 }

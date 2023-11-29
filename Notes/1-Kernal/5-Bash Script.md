@@ -480,6 +480,8 @@ echo Battary Life : $Result
 #Trim
 Result="100%"
 echo ${Result%?}
+#Cut
+
 ```
 
  - **Exit Operations**:

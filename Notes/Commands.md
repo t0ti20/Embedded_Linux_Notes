@@ -12,7 +12,9 @@
 - `useradd`: Create a new user.
 - `su`: Switch shell to another user.
 - `id`: Print user and group information for each specified USER.
+- `whoami`: Print the username associated with the current effective user ID.
 - `chmod`: Change the access permissions of a file or directory.
+- `umask`: Manage the read/write/execute permissions that are masked out. (-S)
 - `chgrp`: Change group ownership of files and directories.
 - `usermod`: Modify a user account.
 - `groupadd`: Add user groups to the system.
@@ -45,14 +47,14 @@
 - `tar`:  Archiving utility. Often combined with a compression method. (-c -x -z -v -f)
 - `du`(Disk usage): estimate and summarize file and directory size usage. (-s -h)
 - `df`: Gives an overview of the filesystem disk space usage. (-h)
-- `declare`: Declare variables and give them attributes. (-i -a -r)
+- `declare`: Declare variables or function and give them attributes. (-i -a -r)
 - `json_pp`: Converts between  input and output formats (one of them is JSON).
 - `jq`: A command-line JSON processor that uses a domain-specific language. (. -r)
 - `unset`: Remove shell variables or functions. (-v -f)
 - `time`: Measure how long a command took to run.
 - `dd`: Convert and copy a file. (bs= if= of= conv=)
 - `head`: Output the first part of files. (-n)
-- `grep`: Find patterns in files using regular expressions. (-o -E -i -r -v -n)
+- `grep`: Find patterns in files using regular expressions. (-o -E -i -r -v -n -A -B)
 - `stat`: Display file and filesystem information.
 - `ln`: Creates links to files and directories. (-s)
 - `acpi`: Shows battery status or thermal information. (-V)
@@ -82,3 +84,4 @@
 - `touch`: Create files and set access/modification times.
 - `diff`: Compare files and directories. (-r -u -c -n)
 - `patch`: Patch a file (or files) with a diff file. (-R)
+- ``
