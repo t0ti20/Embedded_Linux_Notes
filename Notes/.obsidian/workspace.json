@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4913e7798cd25aea",
+        "id": "8b9d229f384581d4",
         "type": "tabs",
         "children": [
           {
-            "id": "4ff7af7816fdb330",
+            "id": "4979ffc7f4d137a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Kernal/5-Bash Script.md",
+                "file": "C++.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "static li",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 288.5
   },
   "right": {
     "id": "f0ca3c6263f55eec",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1-Kernal/5-Bash Script.md",
+                "file": "C++.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1-Kernal/5-Bash Script.md",
+                "file": "C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1-Kernal/5-Bash Script.md"
+                "file": "C++.md"
               }
             }
           },
@@ -157,27 +157,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4ff7af7816fdb330",
+  "active": "ab4524b1ec272ad6",
   "lastOpenFiles": [
-    "Commands.md",
-    "1-Kernal/5-Bash Script.md",
-    "C++.md",
-    "OOP.md",
-    "Git Tutorial.md",
     "3-Yocto/2-Development Stage.md",
+    "3-Yocto/1-Pre-Development.md",
+    "OOP.md",
+    "2-Embedded Linux/1-Tool Chain.md",
+    "C++.md",
+    "1-Kernal/5-Bash Script.md",
+    "1-Kernal/4-User Management Stack.md",
+    "Commands.md",
+    "Git Tutorial.md",
     "2-Embedded Linux/5-System Initialization.md",
     "Overview.canvas",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
     "2-Embedded Linux/2-Bootloader.md",
-    "3-Yocto/1-Pre-Development.md",
     "1-Kernal/3-File System Stack.md",
-    "2-Embedded Linux/1-Tool Chain.md",
     "1-Kernal/1-Process Stack & System Calls.md",
     "2-Embedded Linux/3-Kernal.md",
     "3-Yocto",
     "Kernal/0-Kernal.canvas",
     "Embedded Linux/0-Embedded Linux.canvas",
-    "1-Kernal/4-User Management Stack.md",
     "Untitled.canvas",
     "2023-10-26.md",
     "Materials/Untitled Diagram.drawio.png",

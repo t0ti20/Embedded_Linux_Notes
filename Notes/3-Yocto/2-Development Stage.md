@@ -230,6 +230,7 @@ In the `do_compile` and `do_install` tasks, define how to compile and install th
 #Configure Compiling Task
 do_compile () 
 {
+	#Compile
 	${CXX} *.cpp -o <application_name> #Hello_World
 }
 #Configure Installing Task
@@ -264,3 +265,6 @@ ls tmp/*
 
 
 
+
+
+## Layer Dependences

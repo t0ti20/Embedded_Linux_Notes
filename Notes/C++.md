@@ -36,3 +36,204 @@ for(auto Element:Array)
   cout << Element << endl;
 }
 ```
+# Strings (std::string)
+## Declaring and Using 
+
+```cpp
+#include<string>
+//Empty String
+std::string Name;
+//Initialized
+std::string Name{"My Name"};
+//Part Of Strring
+std::string Name{"My Name",4};
+//Repeat Character
+std::string Name{'A',4}
+//Range
+std::string Name{"Hello World",2,6};
+```
+
+## Concatenating
+
+```cpp
+#include<string>
+std::string Name_1{"My Name"};
+std::string Name_2{" Is Khaled"};
+// + Operator
+std::string Name{Name_1+Name_2};
+//Append
+Name_1.append(Name_2);
+```
+
+##  Accessing Characters
+
+```cpp
+#include<string>
+std::string Name{"This Is My String."};
+// size Function
+for(size_t Counter{};Counter<Name.size();Counter++)
+{
+	std::cout<<Name[Counter]<<std::endl;//Name.at(Counter)
+}
+// front and back
+ char &Front=Name.front();
+ char &Back=Name.back();
+ Front='t';
+ Back='!';
+ cout<<Name<<endl;
+ // Pointer
+ std::string Name{"This Is My String."};
+ char *Name_Ptr=Name.data();
+ cout<<Name_Ptr<<endl;
+```
+
+## Size and Capacity
+
+```cpp
+#include<string>
+std::string Name{"This Is My String."};
+std::string No_Name{};
+// empty Function
+cout<<Name.empty()<<endl;
+cout<<No_Name.empty()<<endl;
+// size function
+cout<<No_Name.size()<<endl;
+cout<<Name.size()<<endl;
+// length function
+cout<<No_Name.length()<<endl;
+cout<<Name.length()<<endl;
+// max number
+cout<<std::string::max_size()<<endl;
+cout<<std::Name.capacity()<<endl;
+// extend size
+Name.reserve(<bytes>);
+// reduce string
+Name.shrink_to_fit(<bytes>);
+```
+
+## Modifying
+
+```cpp
+#include<string>
+std::string Name{"This Is My String."};
+// insert string
+Name.insert(4," Hello");
+Name.insert(4,1,'H');
+Name.insert(4," Hello World",6);
+// erase string
+Name.erase(4,Name.size());
+// empty string
+Name.clear();
+std::cout<<Name<<std::endl;
+// push - pop
+Name.push_back('!');
+Name.pop_back();
+```
+##  Comparing
+
+```cpp
+#include<string>
+std::string Number_1{"Number 1"};
+std::string Number_2{"Number 2"};
+// operator
+if(Number_1>Number_2)cout<<"True"<<endl;
+else cout<<"False"<<endl;
+// compare
+if(Number_1.compare(0,6,Number_2,0,6)==0)cout<<"True"<<endl;
+else cout<<"False"<<endl;
+```
+
+##  Common Operations
+
+```cpp
+#include<string>
+std::string Number{"Number 1"};
+// Replacing
+Number.replace(7,8,"2");
+// copy
+char Array[10]{};
+Number.copy(Array,1,7);
+cout<<Array<<endl;
+// resize
+Number.resize(10,'!');
+Number.resize(6);
+cout<<Number<<endl;
+// swap
+std::string Number_1{"Number 1"};
+std::string Number_2{"Number 2"};
+Number_1.swap(Number_2);
+cout<<Number_1<<endl;
+```
+
+## Searching
+
+```cpp
+#include<string>
+std::string Number{"The Number Is 1"};
+// find
+cout << Number.find("Is") << endl;
+cout << Number.find("The",2) << endl;
+```
+
+## Numbers Transforming
+
+```cpp
+#include<string>
+std::string Number_String{};
+int Number{100};
+// to_string
+Number_String=to_string(Number);
+cout << Number_String << endl;
+// sto<type>
+Number=stoi(Number_String);
+cout << Number_String << endl;
+```
+
+## Raw String Literals
+
+```cpp
+#include<string>
+std::string String
+{
+  R"<delimiter>(  1-Hello!
+  2-Hello/
+  3-Hello*
+  4-Hello
+  )<delimiter>"
+};
+cout<<String<<endl;
+```
+
+
+
+## String View
+
+```cpp
+#include<string>
+std::string Name{"This Is My Name !"};
+std::string_view Name_View{Name};
+//remove_prefix
+Name_View.remove_prefix(1);
+//remove_suffix
+Name_View.remove_suffix(1);
+std::cout<<Name_View<<std::endl;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
