@@ -220,15 +220,14 @@ Dynamic libraries (often known as shared libraries) are libraries that are loade
 	- **Dependency**: If a shared library is missing, moved, or an incompatible version, the program will not run.
 
 ```BASH
-gcc -c -fPIC test1.c
-gcc -fPIC -c test2.c
-gcc -shared -o libtest.so test1.o test2.o
+gcc -c -fPIC <File_Name>.cpp -o <File_Name>.o
+gcc -shared -o lib<File_Name>.so <File_Name>.o
 ```
 
 If you want it to look for libraries in other directories as well, you can place a colon-separated list of paths in the LD_LIBRARY_PATH shell variable:
 
 ```BASH
-export LD_LIBRARY_PATH=/opt/lib:/opt/usr/lib
+export LD_LIBRARY_PATH=<Path>:$LD_LIBRARY_PATH
 ```
 
 # References:

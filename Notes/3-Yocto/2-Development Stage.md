@@ -77,6 +77,26 @@ bitbake rpi-test-image
 echo"LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"">>./build/conf/local.conf
 #Check The Output
 ls ./tmp/deploy/image
+#removes the state information
+bitbake -c cleansstate <recipe>
+#removes files without affecting rebuild.
+bitbake -c clean <recipe>
+#cleans up additional files
+bitbake -c cleanall <recipe>
+##############################################
+#Build Config File Commands
+#specify a preferred provider for a particular recipe
+PREFERRED_PROVIDER_<recipe>
+#Change Devsheel Into Terminal
+OE_TERMINAL = "screen"
+#Select Building Image
+MACHINE ??= "raspberrypi4-64"
+#Accept License In Not Exist
+LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+#Select Recipes You Want To Install On Target
+IMAGE_INSTALL:append = " <recipe>"
+#Execlude Specific Recipe Or Folder
+BBMASK:append = "meta-mylayer/recipes-example/<recipe>"
 ```
 
 ## Layer Customization
@@ -181,7 +201,6 @@ bitbake -c listtasks <recipe_name>
 ```
 
 #### Recipe Content:
-
 ##### 1-Important environment variables:
 
 ```bash
@@ -193,22 +212,42 @@ LIC_FILES_CHKSUM = ""
 SRC_URI = "git:<Repo_Link>;protocol=https;branch=master"
 #Define Version Of THis Application
 PV = "1.0+git${SRCPV}"
+#Make Compile Tiem Dependences Between Two Recipes
+DEPENDS += "<recipe>" #recipe Name or alias PROVIDES
+#Make A Compile Time Alias For Recipe
+PROVIDES += "<alias>"
+#Make RunTime Dependences Between Two Recipes
+RDEPENDS += "<recipe>" #recipe Name or alias PROVIDES
+#Make A RunTime Time Alias For Recipe
+RPROVIDES:${PN} += "<alias>"
+#Make onflict Between Two Layers Only One Should Include
+RCONFLICTS:${PN} += "<recipe>"
 #Source Revision For Getting Commit Number
-SRCREV="96873d9cf33fc642dc9bebe5b16e9a8bd750a664" #Latest="${AUTOREV}"
-#Source Directory
-S = "${WORKDIR}/git"
+SRCREV="<CODE>" #Latest="${AUTOREV}"
 # Package name.
 PN
 # Package revision.
 PR
+#Source Directory
+S = "${WORKDIR}/git"
+#Root Distination /
+D
 #Bin Directory
 bindir
 #C++ Comiler
 CXX
 #C Comiler
 CC
-#Local Working Directory Of Current Task 
-WORKDIR
+#Local Working Directory Of Current Task </work/<recipe>>
+WORKDIR 
+#libraries are installed on the target device
+libdir
+#libraries are staged during the build process
+STAGING_LIBDIR
+#Make File For Yocto
+oe_runmake
+#Passing Arguments to Make File
+EXTRA_OEMAKE:append = "DESTDIR=${D}"
 ```
 
 ##### 2-Important Tasks in the Recipe:
@@ -216,6 +255,10 @@ WORKDIR
 ```bash
 #Fetch Source Code From Path
 do_fetch () {:}
+#After Fetch Task
+do_unpack () {:}
+#Patch Any Patch File Run After unpack
+do_patch () {:}
 #Specify any needed configure commands here
 do_configure () {:}
 #Specify compilation commands here
@@ -248,23 +291,76 @@ do_install ()
 ls meta*/recipes*/images/*.bb
 #OR
 bitbake-layers show-recipes 
+#Check For Recipe <Variable>
+bitbake -e application | grep <Variable>=
+#Check For Log Files
+bitbake -c devhshell <recipe_name> 
+#Do Specific Task In Recipe
+bitbake -c do_<task_name> <recipe_name> 
 #List All Tasks
 bitbake -c listtasks <recipe name>
 #Open WORKDIR In Local Files
 bitbake -c devhshell <recipe_name>
+ls tmp/*
 #Check For dependencies
 bitbake -v <recipe name> 
 #Or Manula
 cd /build/tmp/work/cortexa72-poky-linux
-#Check For Log Files
-bitbake -c devhshell <recipe_name> 
-ls tmp/*
+
+
 ```
 
-
-
-
-
-
-
+___
 ## Layer Dependences
+
+### 1.  Compile Time Dependency  
+
+1. **Introduction:**
+    - Consider providing a brief introduction to Yocto and its layer concept for readers who may be less familiar with the framework.
+2. **Compile Time Dependency:**
+    - Expand on the importance of compile-time dependencies in Yocto, emphasizing that they ensure proper layer order during the build process.
+    - You might want to mention that compile-time dependencies are declared in the recipes to ensure that the necessary components are built in the correct order.
+3. **Example Explanation:**
+    - Provide a bit more detail on the example you've given. Explain why it's important to compile the library (`libPrint.a`) before the application (`Application`).
+    - Clarify that the `DEPENDS += "libraries"` line in the application recipe indicates the compile-time dependency on the "libraries" layer.
+4. **Code Comments:**
+    - Consider adding comments in your example code to explain key sections. For instance, explain the purpose of `${CXX}`, `${AR}`, and the linker flags used in the application recipe.
+5. **Run Time Dependency:**
+    - It seems like you've left the section on runtime dependencies unfinished. Consider providing information on why runtime dependencies are important, and perhaps include a brief example or reference to where one could find more information on declaring runtime dependencies in Yocto recipes.
+
+```SHELL
+#Make The Application And Library Layers
+bitbake-layers create-layer ../meta-application
+bitbake-layers create-layer ../meta-libraries
+#Add Code Recipe
+recipetool create -o application.bb <repo_link>
+recipetool create -o libraries.bb <repo_link>
+###################################################
+#In libraries Recipe
+SRCREV = "${AUTOREV}"
+#DO Compile
+${CXX} -c -o Print.o Print.cpp
+${AR} rcs libPrint.a Print.o
+#Do Install
+install -m 0644 ${S}/libPrint.a ${STAGING_LIBDIR}
+###################################################
+#In Application Recipe
+DEPENDS += "libraries" #recipe Name or alias PROVIDES
+SRCREV = "${AUTOREV}"
+#DO Compile
+${CXX} -o Application Main.cpp -L${STAGING_LIBDIR} -lPrint -Wl,--hash-style=gnu
+#Do Install
+install -d ${D}${bindir}
+install -m 0755 Application ${D}${bindir}
+```
+
+### 2.  Run Time Dependency  
+
+
+## Init Manager
+A Brief Intro to Init Manager.
+What does Init Manager do?
+Available Init Managers.
+What is SystemD Init Manager?
+How to integrate SystemD in Yocto?
+Comparision between Init Managers.

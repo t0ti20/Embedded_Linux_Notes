@@ -200,6 +200,30 @@ echo $*
 echo $?
 ```
 
+- **Getopts**: facilitates the parsing of command-line options and arguments in shell scripts.
+
+```BASH
+#!/bin/bash
+while getopts "a:bc:" Option ;
+do
+case ${Option} in 
+    a)
+        echo "This Is Option a -> ${OPTARG}"
+    ;;
+    b)
+        echo "This Is Option b "
+    ;;
+    c)
+        echo "This Is Option c -> ${OPTARG}"
+    ;;
+    *)
+        echo "Please Enter Valid Option !"
+    ;;
+esac
+done
+shift $((OPTIND-1))
+```
+
 - **Exit Status**: A numeric value returned by every command to indicate its success (`0`) or failure (non-zero).
 
 ```SHELL
@@ -350,6 +374,15 @@ source ./Script.sh
 ```Shell
 #Declare
 declare -a Array=("File_1" "File_2")
+declare -l Lower
+declare -u Upper
+declare -A Dictionary
+Lower="AHMED"
+Upper="ahmed"
+echo ${Lower} ${Upper}
+Dictionary["Password"]="1234"
+Dictionary["ID"]="t0ti20"
+echo ${Dictionary["Password"]}
 #First Element
 echo ${Array[0]}
 #Array Size
@@ -420,10 +453,6 @@ echo "After shifting: \$1 = $1, \$2 = $2, \$3 = $3"
 top &
 ```
 
-- **Jobs**: Represent running commands and pipelines
-
-- **Alias**: A custom shortcut to reference a command.
-
 - **Files Operations
 
 ```Bash
@@ -482,6 +511,11 @@ Result="100%"
 echo ${Result%?}
 #Cut
 
+#String Delete
+Numbers="12 13 14 15 16 17 18"
+echo ${Numbers#*16}
+echo ${Numbers%16*}
+echo ${Numbers%16}
 ```
 
  - **Exit Operations**:
@@ -490,6 +524,13 @@ echo ${Result%?}
 exit 1
 ```
 
+ - **ROFI Examples**:
+```BASH
+#!/bin/bash
+Values=("./Test_C\n./Test_C++")
+Selected_Value=$(echo -e "${Values[@]}"| rofi -dmenu)
+echo "${Selected_Value}"
+```
  - **Case Converting**:
  
 ```Bash

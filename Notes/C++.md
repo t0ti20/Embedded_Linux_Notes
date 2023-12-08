@@ -65,7 +65,7 @@ std::string Name{Name_1+Name_2};
 Name_1.append(Name_2);
 ```
 
-##  Accessing Characters
+## Accessing Characters
 
 ```cpp
 #include<string>
@@ -129,7 +129,7 @@ std::cout<<Name<<std::endl;
 Name.push_back('!');
 Name.pop_back();
 ```
-##  Comparing
+## Comparing
 
 ```cpp
 #include<string>
@@ -143,7 +143,7 @@ if(Number_1.compare(0,6,Number_2,0,6)==0)cout<<"True"<<endl;
 else cout<<"False"<<endl;
 ```
 
-##  Common Operations
+## Common Operations
 
 ```cpp
 #include<string>
@@ -237,3 +237,36 @@ std::cout<<Name_View<<std::endl;
 
 
 
+
+
+___
+# Functions
+## Pass By Reference
+
+```cpp
+// & Operaot
+void Modify_Number(int &Number){Number++;}
+int main()
+{
+  int x{9};
+  Modify_Number(x);
+  cout << x << endl;
+  return 0;
+}
+// Pointer
+// Array
+void Modify_Number(int (&Array)[4],int Size)
+{
+	for(size_t Counter{};Counter<Size;++Counter)
+	{
+		Array[Counter]++;
+	}
+}
+int main()
+{
+  int x[]{10,20,30,40};
+  Modify_Number(x,4);
+  cout << x[1] << endl<< x[2] << endl<< x[3] << endl;
+  return 0;
+}
+```

@@ -8,7 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4979ffc7f4d137a5",
+            "id": "df07b6662f4d3f59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Yocto/2-Development Stage.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d75ded92ea9890e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Commands.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4da85fd7d6a7f3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -157,20 +182,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ab4524b1ec272ad6",
+  "active": "e4da85fd7d6a7f3e",
   "lastOpenFiles": [
-    "3-Yocto/2-Development Stage.md",
-    "3-Yocto/1-Pre-Development.md",
-    "OOP.md",
-    "2-Embedded Linux/1-Tool Chain.md",
-    "C++.md",
-    "1-Kernal/5-Bash Script.md",
-    "1-Kernal/4-User Management Stack.md",
-    "Commands.md",
     "Git Tutorial.md",
+    "OOP.md",
+    "SOME-IP.md",
+    "Commands.md",
+    "1-Kernal/5-Bash Script.md",
+    "3-Yocto/2-Development Stage.md",
+    "C++.md",
     "2-Embedded Linux/5-System Initialization.md",
-    "Overview.canvas",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
+    "2-Embedded Linux/1-Tool Chain.md",
+    "Overview.canvas",
+    "3-Yocto/1-Pre-Development.md",
+    "1-Kernal/4-User Management Stack.md",
     "2-Embedded Linux/2-Bootloader.md",
     "1-Kernal/3-File System Stack.md",
     "1-Kernal/1-Process Stack & System Calls.md",
@@ -203,7 +229,6 @@
     "Pasted image 20231006092254.png",
     "Pasted image 20231006092258.png.md",
     "Pasted image 20231006092258.png",
-    "Pasted_image_20231006083942.png.md",
     "Pasted image 20231006083942.png",
     "Stacks/Stacks",
     "Stacks/Untitled",
