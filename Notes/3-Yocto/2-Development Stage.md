@@ -63,7 +63,7 @@ bitbake-layers add-layer ../meta-raspberrypi
 #Remove Layer
 bitbake-layers remove-layer ../meta-yocto-bsp
 #Show All Layers
-bitbake-layers show-layers
+	bitbake-layers show-layers
 #Get Machine Name <raspberrypi4-64>
 ls ../meta-raspberrypi/conf/machine/
 #Update Machine Name In local.config
@@ -171,6 +171,9 @@ bitbake-layers add-layer ../meta-application
 3. **Create Recipe Using recipetool:**
 ```BASH
 recipetool create -o application.bb <repo_link>
+recipetool create -o <name>.bb -S <commip> <repo_link>
+recipetool create -o <name>.bb -V <tag> <repo_link>
+recipetool create -o <name>.bb -B <branch> <repo_link>
 ```
 Ensure the new layer is recognized by Yocto by updating `layer.conf`
 ```Bash
@@ -363,4 +366,13 @@ What does Init Manager do?
 Available Init Managers.
 What is SystemD Init Manager?
 How to integrate SystemD in Yocto?
-Comparision between Init Managers.
+Comparison between Init Managers.
+
+how to add in yocto project 
+```bash
+#In local.conf File
+DISTRO_FEATURES:append = " systemd"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+```

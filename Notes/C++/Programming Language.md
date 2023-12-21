@@ -36,6 +36,49 @@ for(auto Element:Array)
   cout << Element << endl;
 }
 ```
+
+# Operators
+## Operator Types
+
+```CPP
+# Arithmetic Operators
+a + b;
+# Assignment Operators
+a = 5;
+# Relational Operators
+a > b;
+# Logical Operators
+(a>b)&&(a>10);
+# Bitwise Operators
+a&1;
+# Other Operators
+sizeof
+?:
+&
+.
+->
+>>
+<<
+```
+## Operator Overloading
+
+```CPP
+void operator+(uint32_t &Number,const string &Name)
+{
+    for(size_t Counter{};Counter<Name.size();Counter++)
+    {
+        Number=Number*10+(Name[Counter]-'a');
+    }
+}
+int main (int argc,char *argv[])
+{
+    uint32_t Number{};
+    string Name{"abcdefg"};
+    Number+Name;
+    cout<<Number<<endl;
+    return 0;
+}
+```
 # Strings (std::string)
 ## Declaring and Using 
 
@@ -269,4 +312,148 @@ int main()
   cout << x[1] << endl<< x[2] << endl<< x[3] << endl;
   return 0;
 }
+// & And Cast
+void Modify_Number(const int &Number){cout << x << endl;}
+int main()
+{
+  double x{9};
+  Modify_Number(x);//Id Const Not Exist Will Fail
+  return 0;
+}
 ```
+## Constrexpr
+
+```CPP
+constexpr int Power(constexpr int Number)
+{
+	return (Number*Number);
+}
+int main ()
+{
+	constexpr int Number = Power(2);
+	std::cout<<Number<<std::endl;
+	return 0;
+}
+```
+## Consteval
+
+```CPP
+consteval int Power(int Number)
+{
+	return (Number*Number);
+}
+int main ()
+{
+	constexpr int Number = Power(2);
+	std::cout<<Number<<std::endl;
+	return 0;
+}
+```
+## Main Arguments 
+
+```cpp
+int main (int argc,char *argv[])
+{
+    for(size_t Counter{};Counter<argc;++Counter)
+    {
+        cout<<argv[Counter]<<std::endl;
+    }
+    return 0;
+}
+```
+## Return By Reference
+```cpp
+int &Maximun_Number(int &First_Number,int &Second_Number)
+{
+    return (First_Number>Second_Number)?First_Number:Second_Number;
+    //static int result =(First_Number>Second_Number)?First_Number:Second_Number;
+    //return result;
+}
+int main (int argc,char *argv[])
+{
+
+    int First_Number{10},Second_Number{20};
+    int Result{Maximun_Number(First_Number,Second_Number)};
+    cout<<Result<<std::endl;
+    return 0;
+}
+```
+## Function Overloading
+
+```cpp
+#include <array>
+void Print_Name(string Name_1){cout<<Name_1<<endl;}
+void Print_Name(string Name_1,string Name_2){cout<<Name_1<<' '<<Name_2<<endl;}
+int main (int argc,char *argv[])
+{
+    Print_Name("Hello World");
+    Print_Name("Hello","World");
+    return 0;
+}
+```
+## Optional Output
+
+```cpp
+#include <optional>
+using namespace std;
+int main (int argc,char *argv[])
+{
+    optional<int> Age{3};
+    optional<string> Name{"Ahmed"};
+    optional<bool> Gender{nullopt};
+    cout<<(Age.has_value()?Age.value():-1)<<endl;
+    cout<<static_cast<string>(Name.has_value()?Name.value():"")<<endl;
+    cout<<(Gender.has_value()?Gender.value():-1)<<endl;
+    return 0;
+}
+#--------------------------------------------------------------
+optional<size_t> Get_Char(const string &Name,optional<char> Char)
+{
+    optional<size_t>Result{nullopt};
+    char Searching_For{Char.value_or('!')};
+    for(size_t Counter{};Counter<Name.size();++Counter)
+    {
+        if(Searching_For==Name[Counter])Result=Counter;
+    }
+    return Result;
+}
+int main (int argc,char *argv[])
+{
+    string Name{"Hello World!"};
+    optional<size_t> Result=Get_Char(Name,'A');
+    cout<<static_cast<int>(Result.has_value()?Result.value():-1)<<endl;
+    return 0;
+}
+```
+# Enum & Type Alias
+## Enum Class
+
+```cpp
+enum class MONTH : unsigned char
+{
+	JAN,FEP=254,MAR,
+};
+int main ()
+{
+	unsigned int Register=3'000'000'000;
+	MONTH x=MONTH::MAR;
+	std::cout << static_cast<int>(x) << std::endl;
+	using enum MONTH
+	MONTH x=MAR;
+	std::cout << static_cast<int>(x) << std::endl;
+	return 0;
+}
+```
+
+## Type Alias
+
+```cpp
+using Number=unsigned int;
+int main ()
+{
+    Number x=123;
+    std::cout << x << std::endl;
+    return 0;
+}
+```
+

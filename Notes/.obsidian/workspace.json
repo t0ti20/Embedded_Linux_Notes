@@ -4,47 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "8b9d229f384581d4",
+        "id": "1a2c9b238919cb83",
         "type": "tabs",
         "children": [
           {
-            "id": "df07b6662f4d3f59",
+            "id": "9fd6bf379c89bb29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Yocto/2-Development Stage.md",
+                "file": "C++/Community Guide Lines.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7d75ded92ea9890e",
+            "id": "40159ba0d91bda85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commands.md",
+                "file": "C++/Programming Language.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e4da85fd7d6a7f3e",
+            "id": "29f95f8adf8b20d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++.md",
+                "file": "C++/Programming Language.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++.md",
+                "file": "C++/Programming Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++.md",
+                "file": "C++/Programming Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++.md"
+                "file": "C++/Programming Language.md"
               }
             }
           },
@@ -182,20 +182,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e4da85fd7d6a7f3e",
+  "active": "40159ba0d91bda85",
   "lastOpenFiles": [
-    "Git Tutorial.md",
-    "OOP.md",
-    "SOME-IP.md",
-    "Commands.md",
-    "1-Kernal/5-Bash Script.md",
     "3-Yocto/2-Development Stage.md",
-    "C++.md",
+    "C++/Programming Language.md",
+    "C++/Community Guide Lines.md",
+    "Commands.md",
+    "Git Tutorial.md",
+    "C++",
+    "OOP.md",
     "2-Embedded Linux/5-System Initialization.md",
+    "3-Yocto/1-Pre-Development.md",
+    "SOME-IP.md",
+    "1-Kernal/5-Bash Script.md",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
     "2-Embedded Linux/1-Tool Chain.md",
     "Overview.canvas",
-    "3-Yocto/1-Pre-Development.md",
     "1-Kernal/4-User Management Stack.md",
     "2-Embedded Linux/2-Bootloader.md",
     "1-Kernal/3-File System Stack.md",
@@ -227,11 +229,9 @@
     "Kernal/0-Overview",
     "Materials/Pasted image 20231006094219.png",
     "Pasted image 20231006092254.png",
-    "Pasted image 20231006092258.png.md",
     "Pasted image 20231006092258.png",
     "Pasted image 20231006083942.png",
     "Stacks/Stacks",
-    "Stacks/Untitled",
-    "Kernal/1-Stacks"
+    "Stacks/Untitled"
   ]
 }

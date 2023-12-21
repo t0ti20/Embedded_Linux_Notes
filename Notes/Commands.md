@@ -85,3 +85,6 @@
 - `diff`: Compare files and directories. (-r -u -c -n)
 - `patch`: Patch a file (or files) with a diff file. (-R)
 - `at` : Execute commands once at a later time.
+- `nice` : Execute a program with a custom scheduling priority.(-n)
+- `renice` : Alters the scheduling priority/niceness.(-n -p)
+- `top`: Display dynamic real-time information about running processes.
