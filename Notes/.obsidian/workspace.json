@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1a2c9b238919cb83",
+        "id": "e684422c507dc3b7",
         "type": "tabs",
         "children": [
           {
-            "id": "9fd6bf379c89bb29",
+            "id": "df69fd756430437d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/Community Guide Lines.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "40159ba0d91bda85",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++/Programming Language.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "29f95f8adf8b20d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++/Programming Language.md",
+                "file": "Make-CMake.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 252.5110321044922
   },
   "right": {
     "id": "f0ca3c6263f55eec",
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/Programming Language.md",
+                "file": "Make-CMake.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C++/Programming Language.md",
+                "file": "Make-CMake.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/Programming Language.md"
+                "file": "Make-CMake.md"
               }
             }
           },
@@ -182,21 +157,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "40159ba0d91bda85",
+  "active": "df69fd756430437d",
   "lastOpenFiles": [
-    "3-Yocto/2-Development Stage.md",
-    "C++/Programming Language.md",
-    "C++/Community Guide Lines.md",
-    "Commands.md",
+    "C++/2-Community Guide Lines.md",
+    "C++/1-Programming Language.md",
+    "2-Embedded Linux/1-Tool Chain.md",
+    "Make-CMake.md",
     "Git Tutorial.md",
+    "Commands.md",
+    "3-Yocto/2-Development Stage.md",
     "C++",
-    "OOP.md",
+    "C++/3-OOP.md",
     "2-Embedded Linux/5-System Initialization.md",
     "3-Yocto/1-Pre-Development.md",
     "SOME-IP.md",
     "1-Kernal/5-Bash Script.md",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
-    "2-Embedded Linux/1-Tool Chain.md",
     "Overview.canvas",
     "1-Kernal/4-User Management Stack.md",
     "2-Embedded Linux/2-Bootloader.md",
@@ -221,7 +197,6 @@
     "Embedded Linux/Untitled Kanban 1.md",
     "Embedded Linux/Untitled Kanban.md",
     "2-Embedded Linux",
-    "1-Kernal/2-Network Stack.md",
     "Kernal/0-Overview",
     "Materials/Pasted image 20231006093644.png",
     "Materials/Pasted image 20231006093635.png",

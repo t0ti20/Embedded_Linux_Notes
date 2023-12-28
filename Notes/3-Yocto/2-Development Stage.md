@@ -49,11 +49,14 @@ In the Development Stage of your Yocto Project guide, you will be working on cus
 With these steps, you will set up your Yocto development environment, configure it with the required layers and settings, and initiate the build process for your custom Linux image.
 
 ```Bash
+#Download Yaocto
+git clone -b dunfell https://github.com/yoctoproject/poky
 #Download meta-raspberrypi Main Layer
-git clone -b mickledore git://git.yoctoproject.org/meta-raspberrypi
+git clone -b dunfell git://git.yoctoproject.org/meta-raspberrypi
+#Optional
+git clone -b dunfell git://git.openembedded.org/openembedded-core 
 #Download Dependences
-git clone -b mickledore git://git.openembedded.org/openembedded-core #Optional
-git clone -b mickledore git://git.openembedded.org/meta-openembedded
+git clone -b dunfell git://git.openembedded.org/meta-openembedded
 #Update Downloadded Layers
 nano ./conf/bblayers.conf
 #Or
@@ -63,7 +66,7 @@ bitbake-layers add-layer ../meta-raspberrypi
 #Remove Layer
 bitbake-layers remove-layer ../meta-yocto-bsp
 #Show All Layers
-	bitbake-layers show-layers
+bitbake-layers show-layers
 #Get Machine Name <raspberrypi4-64>
 ls ../meta-raspberrypi/conf/machine/
 #Update Machine Name In local.config

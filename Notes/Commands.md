@@ -85,6 +85,15 @@
 - `diff`: Compare files and directories. (-r -u -c -n)
 - `patch`: Patch a file (or files) with a diff file. (-R)
 - `at` : Execute commands once at a later time.
-- `nice` : Execute a program with a custom scheduling priority.(-n)
-- `renice` : Alters the scheduling priority/niceness.(-n -p)
+- `nice` : Execute a program with a custom scheduling priority. (-n)
+- `renice` : Alters the scheduling priority/niceness. (-n -p)
 - `top`: Display dynamic real-time information about running processes.
+- `kill`: Sends a signal to a process, usually related to stopping the process. 
+- `ifconfig`: Network Interface Configurator. (-a)
+- `route`: Use route cmd to set the route table. (-net)
+- `arp`: Show and manipulate your system's ARP cache. (-s -d)
+- `hoost`: Lookup Domain Name Server.()
+- `ping`: Send ICMP ECHO_REQUEST packets to network hosts.(-c  -i)
+- `traceroute`: Print the route packets trace to network host.
+- `netstat`: Displays network-related information such as open connections, etc.
+- `wget`: Download files from the Web.

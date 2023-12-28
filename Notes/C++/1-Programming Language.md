@@ -425,6 +425,65 @@ int main (int argc,char *argv[])
     return 0;
 }
 ```
+## Function Overloading
+
+```cpp
+uint32_t Max(uint32_t Number_1,double Number_2)
+{
+    return Number_1>Number_2?Number_1:Number_2;
+}
+uint32_t Max(double Number_2,uint32_t Number_1)
+{
+    return Number_1>Number_2?Number_1:Number_2;
+}
+int main (int argc,char *argv[])
+{
+    cout<<Max(10.10,9)<<endl;
+    return 0;
+}
+```
+## Lambda Function 
+
+```cpp
+int main (int argc,char *argv[])
+{
+    auto Function=[](uint32_t Numper_1,uint32_t Numper_2)->uint32_t
+    {
+        return (Numper_1+Numper_2);
+    };
+    cout<<Function(10,20)<<endl;
+    return 0;
+}
+//----------------------------------------------------
+uint32_t Number_1{20};
+uint32_t Number_2{30};
+int main (int argc,char *argv[])
+{
+    uint32_t Number_1{10};
+    uint32_t Number_2{10};
+    auto Function=[Number_1,Number_2]()->uint32_t
+    {
+        return (Number_1+Number_2);
+    };
+    cout<<Function()<<endl;
+    return 0;
+}
+//------------------------------------------------------
+// & Reference -- = Value
+int main (int argc,char *argv[])
+{
+    uint32_t Number_1{10};
+    uint32_t Number_2{10};
+    auto Function=[&]()->uint32_t
+    {
+        ++Number_1;++Number_2;
+        return (Number_1+Number_2);
+    };
+    cout<<Function()<<endl;
+    cout<<Function()<<endl;
+    return 0;
+}
+```
 # Enum & Type Alias
 ## Enum Class
 
