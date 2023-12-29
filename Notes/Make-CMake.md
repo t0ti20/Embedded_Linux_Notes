@@ -104,7 +104,37 @@ all :
 #####################################################
 ```  
 
+## Make Build In Rules
 
+```BASH
+# Print Make INternal Database
+make -p
+# Do not use internal database 
+make <rule> -r
+```
+
+## Common Usage
+
+```BASH
+C_Files := Main.c File.c
+O_Files := $(C_Files:.c=.o)
+####################################################
+build: main.o test .o
+	$(CC) $^ -o runprogram
+####################################################
+#Change Make Default Directory
+make -C <path>
+####################################################
+# (@)                   -hide command
+# (%.o)                 -all object files
+# $(CC)                 -replace variable
+# ($<)                  -One Dependency at time
+# ($@)                  -One Output at time
+# ($(wildcard *.c))     -all fiiles .c
+# $(CC)                 -replace variable
+####################################################
+####################################################
+```
 # References:
 
 1- [GNU `make` Manual](https://www.gnu.org/software/make/manual/html_node/index.html)

@@ -484,6 +484,19 @@ int main (int argc,char *argv[])
     return 0;
 }
 ```
+## Inline Functions
+
+```CPP
+inline int Add(int Number_1,int Number_2)
+{
+    return (Number_1+Number_2);
+}
+int main (int argc,char *argv[])
+{
+    cout<<Add(10,20)<<endl;
+    return 0;
+}
+```
 # Enum & Type Alias
 ## Enum Class
 

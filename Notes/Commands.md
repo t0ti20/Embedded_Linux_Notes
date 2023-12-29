@@ -97,3 +97,5 @@
 - `traceroute`: Print the route packets trace to network host.
 - `netstat`: Displays network-related information such as open connections, etc.
 - `wget`: Download files from the Web.
+- `dpkg`: Debian package manager.(-i -r -l)
+- `apt-cache`: Debian and Ubuntu package query tool.(search, show <name>)
