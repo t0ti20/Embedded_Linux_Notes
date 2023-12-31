@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Make-CMake.md",
+                "file": "Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Make-CMake.md",
+                "file": "Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Make-CMake.md",
+                "file": "Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Make-CMake.md"
+                "file": "Commands.md"
               }
             }
           },
@@ -159,13 +159,14 @@
   },
   "active": "df69fd756430437d",
   "lastOpenFiles": [
+    "Make-CMake.md",
+    "Overview.canvas",
     "Commands.md",
     "Pasted image 20231229103937.png",
     "2-Embedded Linux/1-Tool Chain.md",
     "2-Embedded Linux/4-Root File System (Rootfs).md",
     "C++/1-Programming Language.md",
     "C++/2-Community Guide Lines.md",
-    "Make-CMake.md",
     "Git Tutorial.md",
     "3-Yocto/2-Development Stage.md",
     "C++",
@@ -174,7 +175,6 @@
     "3-Yocto/1-Pre-Development.md",
     "SOME-IP.md",
     "1-Kernal/5-Bash Script.md",
-    "Overview.canvas",
     "1-Kernal/4-User Management Stack.md",
     "2-Embedded Linux/2-Bootloader.md",
     "1-Kernal/3-File System Stack.md",

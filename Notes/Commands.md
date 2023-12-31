@@ -44,7 +44,7 @@
 - `?`: Status Of Latest Operation
 - `$$`: PID of current process
 - `rsync`: Transfer files either to or from a remote host. (-a -v)
-- `tar`:  Archiving utility. Often combined with a compression method. (-c -x -z -v -f)
+- `tar`:  Archiving utility. Often combined with a compression method. (-c -x -z -j -t -v -f)
 - `du`(Disk usage): estimate and summarize file and directory size usage. (-s -h)
 - `df`: Gives an overview of the filesystem disk space usage. (-h)
 - `declare`: Declare variables or function and give them attributes. (-i -a -r)
@@ -98,4 +98,9 @@
 - `netstat`: Displays network-related information such as open connections, etc.
 - `wget`: Download files from the Web.
 - `dpkg`: Debian package manager.(-i -r -l)
-- `apt-cache`: Debian and Ubuntu package query tool.(search, show <name>)
+- `apt-cache`: Debian and Ubuntu package query tool.(search, show "name")
+- `which`: Locate a program in the user's path. (-a)
+- `locate`: Find filenames quickly.
+- `find`: Find files or directories under the given directory tree, recursively. (-name)
+- `gzip`: Compress/uncompress files with gzip compression (LZ77).
+- `gunzip`: Extract file(s) from a gzip (.gz) archive.
