@@ -104,3 +104,12 @@
 - `find`: Find files or directories under the given directory tree, recursively. (-name)
 - `gzip`: Compress/uncompress files with gzip compression (LZ77).
 - `gunzip`: Extract file(s) from a gzip (.gz) archive.
+- `insmod`: Dynamically load modules into the Linux Kernel.
+- `modprobe`: Add or remove modules from the Linux kernel.
+- `lsmod`: Shows the status of Linux kernel modules.
+- `modinfo`: Extract information about a Linux kernel module.
+- `lsblk`: Lists information about devices.
+- `mknod`: Create block or character device special files. (c b "major" "minor")
+- `dd`: Convert and copy a file. (if of)
+- `od`: Display file contents in octal, decimal or hexadecimal format. (-x)
+- `fdisk`: A program for managing partition tables and partitions on a hard disk.

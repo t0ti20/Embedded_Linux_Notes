@@ -1,11 +1,12 @@
-## Make: An Overview
+# Make
+## An Overview
 
 **Definition:** Make is a scripting tool used for building executables based on specified commands. It parses an input file called a `Makefile` to define rules that it will execute.
 **Types of Make:**
 - GNU Make
 - Borland Make
 
-## Why Use Make?
+## Why Use Make
 
 1. **Organize Compilation Process:**
     - Structured approach to compiling code.
@@ -21,7 +22,7 @@
 - It is not mandatory for the Makefile to be named "Makefile."
 - While running, specify the filename using `make -f <filename>`.
 
-## Make Syntax
+## `Makefile` Syntax
 
 ```makefile
 # 1) Setting Rule
@@ -106,7 +107,7 @@ all :
 
 ## Make Build In Rules
 
-```BASH
+```SHELL
 # Print Make INternal Database
 make -p
 # Do not use internal database 
@@ -115,7 +116,7 @@ make <rule> -r
 
 ## Common Usage
 
-```BASH
+```SHELL
 C_Files := Main.c File.c
 O_Files := $(C_Files:.c=.o)
 ####################################################
@@ -135,7 +136,71 @@ make -C <path>
 ####################################################
 ####################################################
 ```
+
+
+
+
+---
+# CMake
+## An Overview
+
+**Definition:** CMake is a cross-platform build-system generator. It uses a scripting language within a `CMakeLists.txt` file to define rules for building executables and libraries.
+## Why Use Make
+
+1. **Organize Compilation Process:**
+    - Provides a structured approach to compiling code.
+2. **Run Tools and Scripts:**
+    - Facilitates the execution of various tools and scripts during the build process.
+3. **Automation:**
+    - Automates the build process, reducing manual intervention.
+4. **Control Over Outputs:**
+    - Ensures full control over outputs and their timing.
+## CMakeLists.txt Naming Convention
+
+- It is not mandatory for the CMakeLists.txt file to be named a specific way.
+- While running, specify the filename using `cmake -f <filename>` or by default using `CMakeLists.txt`.
+## `CMakeLists.txt` Syntax
+
+```cpp
+#Set Version
+cmake_minimum_required(VERSION 3.22)
+#Set Project Name
+PROJECT(Test_C++)
+#Select Building Files And Executable Name
+add_executable(Main Company.cpp Main.cpp)
+#Add Include Directory
+target_include_directories(Main PUBLIC Files/)
+#Pass Include To VS-CODE
+include_directories(/Files)
+#Set Variable
+set(SRC_FILES Files/Company.cpp Application/Main.cpp)
+#Print Message (FATAL_ERROR-WARNING-STATUS)
+message(FATAL_ERROR "Files To Be Compiled : ${SRC_FILES}")
+#Make Condition
+if(EXISTS ${CMAKE_SOURCE_DIR}/Main.cpp)
+	message("Compiling Main")
+else()
+	message("Compiling Main")
+endif()
+#Inheret Other CMAKE
+add_subdirectory(${CMAKE_SOURCE_DIR}/Libraries)
+#Link Library
+target_link_libraries(Main PUBLIC MathLibrary)
+# Create a library add SHARED to make it dynamic
+add_library(MathLibrary ${SOURCES})
+```
+
+## Common Usage
+
+```BASH
+#Supported IDEs
+cmake -G
+#Show All Variables 
+cmake --help-variable-list
+CMAKE_SOURCE_DIR
+
+```
 # References:
 
 1- [GNU `make` Manual](https://www.gnu.org/software/make/manual/html_node/index.html)
-2- [GNU `make`](https://www.gnu.org/software/make/manual/html_node/index.html)
+2- [GNU `cmake` Manual](https://cmake.org/cmake/help/latest/index.html)
