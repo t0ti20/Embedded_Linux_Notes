@@ -497,6 +497,22 @@ int main (int argc,char *argv[])
     return 0;
 }
 ```
+## Function Templates
+
+```cpp
+template<typename Type>Type Greater(Type Number_1,Type Number_2)
+{
+    return Number_1>Number_2?Number_1:Number_2;
+}
+int main()
+{
+    //Implicit Converting
+    std::cout<<Greater(90.1,100.1)<<std::endl;
+    //Explicit Converting
+    std::cout<<Greater<int>(90.1,100.1)<<std::endl;
+    return 0;
+}
+```
 # Enum & Type Alias
 ## Enum Class
 

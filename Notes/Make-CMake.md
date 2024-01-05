@@ -107,7 +107,7 @@ all :
 
 ## Make Build In Rules
 
-```SHELL
+``` SHELL
 # Print Make INternal Database
 make -p
 # Do not use internal database 
@@ -173,7 +173,9 @@ target_include_directories(Main PUBLIC Files/)
 #Pass Include To VS-CODE
 include_directories(/Files)
 #Set Variable
-set(SRC_FILES Files/Company.cpp Application/Main.cpp)
+set(SRC_FILES 
+    Files/Company.cpp 
+    Application/Main.cpp)
 #Print Message (FATAL_ERROR-WARNING-STATUS)
 message(FATAL_ERROR "Files To Be Compiled : ${SRC_FILES}")
 #Make Condition
@@ -188,17 +190,92 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/Libraries)
 target_link_libraries(Main PUBLIC MathLibrary)
 # Create a library add SHARED to make it dynamic
 add_library(MathLibrary ${SOURCES})
+#Add Configuration File
+configure_file(Default_Config.in Default_Config.h)
+#For Loop
+foreach(Character IN ITEMS Ahmed Omar Mohamed Adel)
+	message(STATUS ${Character})
+endforeach()
+#While Loop
+set(Counter 10)
+while(Counter)
+    message(STATUS ${Counter})
+    math(EXPR Counter "${Counter}-1")
+endwhile()
+#Function
+function(Print_Hello Count)
+while(Count)
+    message(STATUS "Hello")
+    math(EXPR Count "${Count}-1")
+endwhile()
+endfunction()
+Print_Hello(3)
+#Save File In Cash
+option(Name_1 "Comment_1" TRUE)
+set(Name_2 TRUE CACHE BOOL "Comment_2")
+#Pass Defenition To Compiler cout<<myname
+target_compile_definitions(Main PUBLIC "myname=\"Khaled\"")
+#Pass Option To Compiler
+target_compile_options(Main PUBLIC -O0 -g)
+#Install Application
+install(
+    FILES "${PROJECT_BINARY_DIR}/${Application_Name}"
+    DESTINATION "${PROJECT_BINARY_DIR}/Executable/${Application_Name}"
+)
+#File Manipulation (READ-STRINGS-GLOB_RECURSE)
+file(READ "Application/Main.cpp" Main_Content)
+message(${Main_Content})
+#String
+set(text "int main()")
+string(REGEX REPLACE "int" "void" output ${text})
+message(${output})
+#Execute Process
+execute_process(COMMAND "ls")
 ```
-
 ## Common Usage
 
 ```BASH
+#Commands In CMake Case insinsitive 
+message("Hello")
+MESSAGE("Hello")
 #Supported IDEs
 cmake -G
 #Show All Variables 
 cmake --help-variable-list
-CMAKE_SOURCE_DIR
-
+${CMAKE_SOURCE_DIR}#Main Cmake Source Directory
+${CMAKE_CURRENT_SOURCE_DIR}#Current Includded Cmake Source Directory
+${CMAKE_BINARY_DIR}#Main Cmake Build Directory
+${CMAKE_CURRENT_BINARY_DIR}#Current Includded Cmake Build Directory
+${CMAKE_GENERARTOR}#Target Makefile Application
+#Set Important Variables
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+#Manipulate With ENV Variables
+Message(STATUS "PATH=$ENV{PATH}")
+#Set Value While Running 
+cmake -DMy_Value=10
+Message(STATUS "Value=${My_Value}")
+#Configuration File Syntax
+define APPLICATION_AUTHOR "KHALED_ELSAYED"
+define APPLICATION_YEAR "${YEAR}"
+define VERSION_MJOR @TestCPP_VERSION_MAJOR@
+define VERSION_MINOR @TestCPP_VERSION_MINOR@
+#If Condition
+if(<constant>)#OFF-0-FASLE N NOTFOUND IGNORE
+if(<relation>)#AND OR MATCHES LESS GREATER EQUAL
+if(TARGET )
+#Function
+function(Print_Hello Count)
+while(Count)
+    message(STATUS "Hello")
+    message(STATUS "${ARGN}")#EXTRA ARGUMENTS
+    message(STATUS "${ARGC}")#ARGUMENTS COUNT
+    math(EXPR Count "${Count}-1")
+endwhile()
+endfunction()
+Print_Hello(3)
+#Search For CPP Files
+file(GLOB_RECURSE SRC_FILES "./Source/*.cpp")
 ```
 # References:
 

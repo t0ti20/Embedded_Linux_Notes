@@ -27,7 +27,7 @@
 - `getent`: Fetch entries from Name Service Switch libraries.
 - `userdel`: Delete a user account and related files.
 - `wc`(Word Count): Count lines, words, and bytes. (-c -w -l)
-- `du`(Disk Usage): estimate and summarize file and directory space usage.
+- `du`(Disk Usage): estimate and summarize file and directory space usage. (-sh)
 - `strings`: Find printable strings in an object file or binary.
 - `scp`(Secure Copy): Copy files between hosts using Secure Copy Protocol over SSH.
 - `more`: Open a file for interactive reading, allowing scrolling and search.
@@ -44,7 +44,7 @@
 - `?`: Status Of Latest Operation
 - `$$`: PID of current process
 - `rsync`: Transfer files either to or from a remote host. (-a -v)
-- `tar`:  Archiving utility. Often combined with a compression method. (-c -x -z -j -t -v -f)
+- `tar`:  Archiving utility. Often combined with a compression method.(-c-x-z-j-t-v-f)
 - `du`(Disk usage): estimate and summarize file and directory size usage. (-s -h)
 - `df`: Gives an overview of the filesystem disk space usage. (-h)
 - `declare`: Declare variables or function and give them attributes. (-i -a -r)
@@ -113,3 +113,4 @@
 - `dd`: Convert and copy a file. (if of)
 - `od`: Display file contents in octal, decimal or hexadecimal format. (-x)
 - `fdisk`: A program for managing partition tables and partitions on a hard disk.
+- `df`: Gives an overview of the filesystem disk space usage.
