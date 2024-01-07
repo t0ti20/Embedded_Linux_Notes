@@ -10,7 +10,6 @@ Output_File_Name="Result"
 #Get Directory
 printf "Please Enter Directory : "
 read Directory
-Directory=$(eval echo "$Directory")
 #Check If The Directory Is Valid
 if [ -d "${Directory}" ]
 then

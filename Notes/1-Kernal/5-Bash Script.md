@@ -138,6 +138,31 @@ ls [^a]*
 ls {a,b,c}.txt 
 ```
 
+Regular Expressions: A regular expression is a sequence of characters that defines a search pattern.
+
+```BASH
+#Basic (grep)
+#1- . Has .zip After
+grep .zip
+#2- ^ Start With log
+grep ^log
+#3- $ End With log
+grep log$
+#4- [] Anything in set
+grep [abc].log
+grep [^abc].log
+grep [a-z].log
+#5- * Optional zero time or More
+grep *.log
+#Extended (grep -E)
+#2- ? Optional one time or zero
+grep -E "colo?r.log"
+#3- ? Optional one time or more
+grep -E "+r.log"
+#1- | Oring 
+grep -E "(a|b).log"
+```
+
 - **Variables**: Named storage locations used to hold values which can be referenced and manipulated within a script.
 
 ```BASH
@@ -173,6 +198,30 @@ echo $@
 echo $*
 #Return Last Operation
 echo $?
+```
+
+- **Getopts**: facilitates the parsing of command-line options and arguments in shell scripts.
+
+```BASH
+#!/bin/bash
+while getopts "a:bc:" Option ;
+do
+case ${Option} in 
+    a)
+        echo "This Is Option a -> ${OPTARG}"
+    ;;
+    b)
+        echo "This Is Option b "
+    ;;
+    c)
+        echo "This Is Option c -> ${OPTARG}"
+    ;;
+    *)
+        echo "Please Enter Valid Option !"
+    ;;
+esac
+done
+shift $((OPTIND-1))
 ```
 
 - **Exit Status**: A numeric value returned by every command to indicate its success (`0`) or failure (non-zero).
@@ -325,6 +374,15 @@ source ./Script.sh
 ```Shell
 #Declare
 declare -a Array=("File_1" "File_2")
+declare -l Lower
+declare -u Upper
+declare -A Dictionary
+Lower="AHMED"
+Upper="ahmed"
+echo ${Lower} ${Upper}
+Dictionary["Password"]="1234"
+Dictionary["ID"]="t0ti20"
+echo ${Dictionary["Password"]}
 #First Element
 echo ${Array[0]}
 #Array Size
@@ -395,10 +453,6 @@ echo "After shifting: \$1 = $1, \$2 = $2, \$3 = $3"
 top &
 ```
 
-- **Jobs**: Represent running commands and pipelines
-
-- **Alias**: A custom shortcut to reference a command.
-
 - **Files Operations
 
 ```Bash
@@ -416,6 +470,10 @@ done < File.txt
 #Output To File
 echo -n "Todays Date -> " > Date.txt
 date >> Date.txt
+#File Exist
+if [ -e File.txt ]
+then
+fi
 ```
 
 - **Arithmetic Operations**:
@@ -451,30 +509,13 @@ echo Battary Life : $Result
 #Trim
 Result="100%"
 echo ${Result%?}
-```
+#Cut
 
-- **File Operations**:
-
-```Bash
-if [ -e "filename" ]; then
-   echo "File exists"
-fi
-```
-
-- **Comparison Operations**:
-
-```Bash
-if [ $a -eq $b ]; then
-   echo "a is equal to b"
-fi
-```
-
-- **Logical Operations**:
-
-```Bash
-if [[ $a -lt 20 && $b -gt 10 ]]; then
-   echo "True"
-fi
+#String Delete
+Numbers="12 13 14 15 16 17 18"
+echo ${Numbers#*16}
+echo ${Numbers%16*}
+echo ${Numbers%16}
 ```
 
  - **Exit Operations**:
@@ -483,6 +524,13 @@ fi
 exit 1
 ```
 
+ - **ROFI Examples**:
+```BASH
+#!/bin/bash
+Values=("./Test_C\n./Test_C++")
+Selected_Value=$(echo -e "${Values[@]}"| rofi -dmenu)
+echo "${Selected_Value}"
+```
  - **Case Converting**:
  
 ```Bash

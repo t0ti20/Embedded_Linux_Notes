@@ -169,52 +169,87 @@ arm-cortex_a8-linux-gnueabihf-readelf -a myprog | grep "Shared library" 0x000000
 ```
 ## Static And Dynamic Library
 ### Static Library
+
 A static library, sometimes known as an archive, is a single file that contains a collection of object files. When a program is linked against a static library, the machine code from the relevant object files in the static library is directly incorporated into the final executable.
+
 **Benefits of Using Static Libraries:**
 	- **Portability**: Since all the code the executable needs is included during the linking phase, the executable can run on any system without requiring additional libraries.
 	- **Performance**: There's a slight performance benefit because the code is already in the executable and doesn't need to be dynamically loaded.
+
 **Drawbacks of Using Static Libraries:**
 	- **Size**: Every program linked with the static library will contain its own copy of the library code, leading to larger executable sizes.
 	- **Updates**: If the library is updated, all programs using it need to be relinked and redistributed to benefit from the changes.
 #### Make Your Static Library
+
 1- Compile  and Assemble Library C File And Make Object File
+
 ```BASH
 gcc -c File.c -o File.o
 ```
-	-c: Make ObjectFile Do Not Link
-	-o: Define Output
+-c: Make ObjectFile Do Not Link
+-o: Define Output
+
 2- Compile All Objects File In One .a File in Case of Static and . as in case of dynamic
+
 ```BASH
 ar rc My_Lib.a File.o
 ```
-	`r` Replace existing or insert new file(s) into the archive.
-	`c` Create the archive.
+`r` Replace existing or insert new file(s) into the archive.
+`c` Create the archive.
+
 3- Compile Wanted File But With Static Lib i Made
+
 ```SHELL
 g++ Main.cpp -L. -lMy_Lib -o Main
 ```
-	`-L.` Adds the current directory to the library search path.
-	`lMy_Lib` Tells the linker to look for a library named `libMy_Lib.a` (or `libMy_Lib.so` for shared libraries) in the directories listed in the library search path.
+`-L.` Adds the current directory to the library search path.
+`lMy_Lib` Tells the linker to look for a library named `libMy_Lib.a` (or `libMy_Lib.so` for shared libraries) in the directories listed in the library search path.
 #### Notes
+
+```bash
+### Default Include Paths:
+g++ -E -x c++ - -v < /dev/null 2>&1 | grep '^ /'
+#### Default Library Paths:
+g++ -E -x c++ - -v < /dev/null 2>&1 | grep '^LIBRARY_PATH'
+### System Include Directories:
+g++ -E -x c++ - -v < /dev/null 2>&1 | grep '^ /' | grep '/include'
+### System Library Directories:
+g++ -E -x c++ - -v < /dev/null 2>&1 | grep '^LIBRARY_PATH' | sed 's/=/ /g' | awk '{print $2}'
 ```
-1- You Can Check For Tool Chain Lib Bath From `g++ --print-sysroot` 
-```
+
 ### Dynamic Library
-Dynamic libraries (often known as shared libraries) are libraries that are loaded at runtime, either when the program starts or in some cases when a particular functionality is called for the first time. This is in contrast to static libraries, which are linked into the program at compile time. Using dynamic libraries can save memory, because several running applications can share a single copy of the library. It also allows one to update the library without recompiling the programs that use it, provided that the interface to the library does not change.
-**Benefits of Using Dynamic Libraries:**
-	- **Memory Efficiency**: Multiple programs can share the same library in memory.
-	- **Updateability**: You can patch or update the library without recompiling the programs that use it (though you must ensure binary compatibility).
-**Drawbacks of Using Dynamic Libraries:**
-	- **Startup Time**: It might take a bit longer to start a program because the system needs to load and link the shared libraries. 
-	- **Dependency**: If a shared library is missing, moved, or an incompatible version, the program will not run.
+  
+Dynamic libraries (often known as shared libraries) are libraries that are loaded at runtime, either when the program starts or in some cases when a particular functionality is called for the first time. This is in contrast to static libraries, which are linked into the program at compile time. Using dynamic libraries can save memory because several running applications can share a single copy of the library. It also allows one to update the library without recompiling the programs that use it, provided that the interface to the library does not change.
+
+**Benefits of Using Dynamic Libraries:** - **Memory Efficiency**: Multiple programs can share the same library in memory. - **Updateability**: You can patch or update the library without recompiling the programs that use it (though you must ensure binary compatibility). 
+
+**Drawbacks of Using Dynamic Libraries:** - **Startup Time**: It might take a bit longer to start a program because the system needs to load and link the shared libraries. - **Dependency**: If a shared library is missing, moved, or an incompatible version, the program will not run.
+
+To compile and create a dynamic library, you can use the following commands:
 ```BASH
-gcc -c -fPIC test1.c
-gcc -fPIC -c test2.c
-gcc -shared -o libtest.so test1.o test2.o
+gcc -c -fPIC <File_Name>.cpp -o <File_Name>.o
+gcc -shared -o lib<File_Name>.so <File_Name>.o
+ldd <application>
 ```
-If you want it to look for libraries in other directories as well, you can place a colon-separated list of paths in the LD_LIBRARY_PATH shell variable:
+
+If you want the system to look for libraries in other directories as well, you can update the `LD_LIBRARY_PATH` shell variable. Add a colon-separated list of paths to `LD_LIBRARY_PATH`:
+
 ```BASH
-export LD_LIBRARY_PATH=/opt/lib:/opt/usr/lib
+export LD_LIBRARY_PATH=<Path>:$LD_LIBRARY_PATH
 ```
+
+The `LD_LIBRARY_PATH` environment variable serves as a list of directories where the dynamic linker searches for shared libraries. Additionally, the system maintains a dynamic linker cache (`/etc/ld.so.cache`) to provide a faster method of locating libraries. To add a directory to the dynamic linker cache, you can edit the `/etc/ld.so.conf` file and then run the following command:
+
+```BASH
+#Build Cash Binary
+ldconfig 
+#Show All Dynamic Libs
+ldconfig -d
+#Build Cash With Addition Path
+Idconfig <path>
+```
+
+This command updates the dynamic linker run-time bindings and includes the specified directories in the cache.
 # References:
+
 1- [Build Image Raspberry](https://hechao.li/2021/12/20/Boot-Raspberry-Pi-4-Using-uboot-and-Initramfs/)
