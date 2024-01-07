@@ -231,6 +231,11 @@ string(REGEX REPLACE "int" "void" output ${text})
 message(${output})
 #Execute Process
 execute_process(COMMAND "ls")
+#Add Coustom Target
+add_custom_target(flash ALL
+    DEPENDS ${Application_Name}
+    COMMAND echo "Im Flasing On Target"
+)
 ```
 ## Common Usage
 
@@ -247,6 +252,11 @@ ${CMAKE_CURRENT_SOURCE_DIR}#Current Includded Cmake Source Directory
 ${CMAKE_BINARY_DIR}#Main Cmake Build Directory
 ${CMAKE_CURRENT_BINARY_DIR}#Current Includded Cmake Build Directory
 ${CMAKE_GENERARTOR}#Target Makefile Application
+${CMAKE_SYSTEM_NAME}#Set To Genaric For Cross Compile
+${CMAKE_CXX_COMPILER}#Set Default CPP Compiler Used
+${CMAKE_C_COMPILER}#Set Default C Compiler Used
+${CMAKE_OBJCOPY_COMPILER}#Set Default Objcopy Compiler Used
+${CMAKE_CXX_FLAGS}#Pass Flags CPP To Compiler
 #Set Important Variables
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -276,6 +286,7 @@ endfunction()
 Print_Hello(3)
 #Search For CPP Files
 file(GLOB_RECURSE SRC_FILES "./Source/*.cpp")
+file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_SOURCE_DIR} "./Source/*.cpp")
 ```
 # References:
 

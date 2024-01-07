@@ -500,16 +500,29 @@ int main (int argc,char *argv[])
 ## Function Templates
 
 ```cpp
-template<typename Type>Type Greater(Type Number_1,Type Number_2)
+template<typename Type> Type Greater(Type Number_1,Type Number_2)
 {
     return Number_1>Number_2?Number_1:Number_2;
 }
+template<> const char* Greater<const char*>(const char* String_1,const char* String_2)
+{
+    return (std::strcmp(String_1,String_2)>0)?String_1:String_2;
+}
+template<typename Return> Return* ARRAY(size_t Size)
+{
+    Return* Array = new Return[Size];
+    return Array;
+}
+###############################################
+template<typename Type_1,typename Type_2> auto Maximum(Type_1 Number_1,Type_2 Number_2)->decltype((Number_1>Number_2)?Number_1:Number_2);
+template<typename Type_1,typename Type_2> auto Maximum(Type_1 Number_1,Type_2 Number_2)->decltype((Number_1>Number_2)?Number_1:Number_2)
+{
+    return (Number_1>Number_2)?Number_1:Number_2;
+}
 int main()
 {
-    //Implicit Converting
-    std::cout<<Greater(90.1,100.1)<<std::endl;
-    //Explicit Converting
-    std::cout<<Greater<int>(90.1,100.1)<<std::endl;
+    auto Return{Maximum(100,20.1)};
+    std::cout<<Return<<"--"<<sizeof(Return)<<std::endl;
     return 0;
 }
 ```
