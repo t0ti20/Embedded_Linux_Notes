@@ -20,24 +20,12 @@
             }
           },
           {
-            "id": "098c5d75d0725055",
+            "id": "52c144547afc2162",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2d544a39206b5a8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Make-CMake.md",
+                "file": "C++/1-Programming Language.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "C++/1-Programming Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "C++/1-Programming Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "C++/1-Programming Language.md"
               }
             }
           },
@@ -182,12 +170,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "098c5d75d0725055",
+  "active": "ab4524b1ec272ad6",
   "lastOpenFiles": [
-    "C++/1-Programming Language.md",
-    "Untitled.md",
-    "Make-CMake.md",
     "Commands.md",
+    "Untitled.md",
+    "C++/1-Programming Language.md",
+    "Make-CMake.md",
+    "1-Kernal/5-Bash Script.md",
     "Git Tutorial.md",
     "Overview.canvas",
     "SOME-IP.md",
@@ -200,7 +189,6 @@
     "C++/3-OOP.md",
     "2-Embedded Linux/5-System Initialization.md",
     "3-Yocto/1-Pre-Development.md",
-    "1-Kernal/5-Bash Script.md",
     "1-Kernal/4-User Management Stack.md",
     "2-Embedded Linux/2-Bootloader.md",
     "1-Kernal/3-File System Stack.md",

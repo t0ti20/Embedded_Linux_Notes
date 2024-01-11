@@ -114,3 +114,5 @@
 - `od`: Display file contents in octal, decimal or hexadecimal format. (-x)
 - `fdisk`: A program for managing partition tables and partitions on a hard disk.
 - `df`: Gives an overview of the filesystem disk space usage.
+- `strace`: Troubleshooting tool for tracing system calls. (-c)
+- `lsof`: Lists open files and the corresponding processes. (-p)

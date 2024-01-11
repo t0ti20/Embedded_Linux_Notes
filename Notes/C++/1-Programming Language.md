@@ -514,14 +514,54 @@ template<typename Return> Return* ARRAY(size_t Size)
     return Array;
 }
 ###############################################
+#->decltype()
 template<typename Type_1,typename Type_2> auto Maximum(Type_1 Number_1,Type_2 Number_2)->decltype((Number_1>Number_2)?Number_1:Number_2);
+int main()
+{
+    auto Return{Maximum(100,20.1)};
+    std::cout<<Return<<"--"<<sizeof(Return)<<std::endl;
+    return 0;
+}
 template<typename Type_1,typename Type_2> auto Maximum(Type_1 Number_1,Type_2 Number_2)->decltype((Number_1>Number_2)?Number_1:Number_2)
 {
     return (Number_1>Number_2)?Number_1:Number_2;
 }
+###############################################
+#decltype(auto)
+template<typename Type_1,typename Type_2>
+decltype(auto)Maximum(Type_1 Number_1,Type_2 Number_2)
+{
+    return Number_1>Number_2?Number_1:Number_2;
+}
 int main()
 {
     auto Return{Maximum(100,20.1)};
+    std::cout<<Return<<"--"<<sizeof(Return)<<std::endl;
+    return 0;
+}
+###############################################
+#Default Arguments
+template<typename Return=double,typename Type_1,typename Type_2>
+Return Maximum(Type_1 Number_1,Type_2 Number_2)
+{
+    return Number_1>Number_2?Number_1:Number_2;
+}
+int main()
+{
+    auto Return{Maximum<int>(100,20.1f)};
+    std::cout<<Return<<"--"<<sizeof(Return)<<std::endl;
+    return 0;
+}
+###############################################
+#Non Type Parameters
+template<int Maximum_Value,typename Return=double,typename Type_1,typename Type_2>
+Return Maximum(Type_1 Number_1,Type_2 Number_2)
+{
+return ((Number_1>Number_2?Number_1:Number_2)>Maximum_Value)?Maximum_Value:(Number_1>Number_2?Number_1:Number_2);
+}
+int main()
+{
+    auto Return{Maximum<100,int>(99,20.1f)};
     std::cout<<Return<<"--"<<sizeof(Return)<<std::endl;
     return 0;
 }

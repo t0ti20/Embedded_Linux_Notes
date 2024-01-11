@@ -236,6 +236,10 @@ add_custom_target(flash ALL
     DEPENDS ${Application_Name}
     COMMAND echo "Im Flasing On Target"
 )
+#Link Library Directory
+link_directories("/user/lib/")
+#Add List
+list(APPENO SRCFILE main.cpp)
 ```
 ## Common Usage
 
