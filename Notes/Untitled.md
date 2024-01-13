@@ -1,120 +1,41 @@
-# Process Monitor Script (Process_Monitor.sh)
+## Description
 
-## Overview
-
-The `Process_Monitor.sh` script is a versatile and interactive tool designed for monitoring and managing processes on a Linux system. It provides various functionalities such as listing running processes, displaying system statistics, killing specific processes, enabling alert mode for CPU and memory, and more.
-
-## Features
-
-### 1. List All Processes
-
-```BASH
-./Process_Monitor.sh -l
-```
-
-This option lists detailed information about all running processes, including PID, CPU usage, memory usage, and command.
-
-### 2. Process Information
-
-```BASH
-./Process_Monitor.sh -i [PID]`
-```
-
-Displays detailed information about a specific process identified by its Process ID (PID). This includes PID, parent PID, CPU usage, memory usage, user, start time, thread name, time, and command.
-
-### 3. Kill Process
-
-```BASH
-./Process_Monitor.sh -k [PID]`
-```
-
-Allows you to kill a specific process by entering its PID. A confirmation prompt ensures you don't accidentally terminate a process.
-
-### 4. Display System Statistics
-
-```BASH
-./Process_Monitor.sh -s
-```
-
-Shows system-wide process statistics, including the total number of processes, memory usage, CPU load, and system uptime.
-
-### 5. Monitor Processes in Real-Time
-
-```BASH
-./Process_Monitor.sh -m
-```
-
-Continuously monitors and displays information about running processes in real-time. It updates every specified interval (default: 10 seconds).
-
-### 6. Enable Alert Mode
-
-```BASH
-./Process_Monitor.sh -a
-```
-
-Enables alert mode for CPU and memory usage. If thresholds are exceeded, an alert message is displayed. This runs continuously in the background.
-
-### 7. Search and Filter Processes
-
-```BASH
-./Process_Monitor.sh -f [OPT]
-```
-
-Search for processes based on specific criteria: user (`usr`), process ID (`pid`), or process name (`name`).
-
-### 8. Interactive Mode
-
-```BASH
-./Process_Monitor.sh -o
-```
-
-Opens an interactive menu allowing you to choose various operations in a user-friendly, menu-driven interface. Simply enter the corresponding option number to perform the desired operation. The menu will continue to be displayed until you choose the "Exit" option.
-
-The interactive mode includes the following operations:
-
-1. **Kill Specific Process By ID**
-    - Enter the process ID to terminate the specified process.
-2. **List All Running Processes**
-    - Display detailed information about all running processes.
-3. **Monitor Running Processes**
-    - Continuously monitor and display information about running processes in real-time. Updates occur every specified interval (default: 10 seconds).
-4. **Process ID Information**
-    - Retrieve detailed information about a specific process identified by its Process ID (PID).
-5. **Display Statistics**
-    - Show system-wide process statistics, including the total number of processes, memory usage, CPU load, and system uptime.
-6. **Enable Alerts**
-    - Activate alert mode for CPU and memory usage. If thresholds are exceeded, an alert message is displayed. This runs continuously in the background.
-7. **Find Process**
-    - Search and filter processes based on specific criteria such as user, process ID, or process name.
-8. **Exit**
-    - Terminate the script and exit the interactive mode.
-
-### 9. Help
-
-```BASH
-./Process_Monitor.sh -h
-```
-
-Displays a help message providing information about valid options and their usage.
+This script is a simple Bash tool designed to generate C++ header and program files with a basic template. It prompts the user to enter information such as author name, email, file name, class name, and namespace. The generated files include a header file (.hpp) and a program file (.cpp) with predefined structures and comments.
 
 ## Usage
 
-1. Clone the repository or download the `Process_Monitor.sh` script.
+1. Make the script executable: `chmod +x cppgenerate.sh`
+2. Run the script: `./cppgenerate.sh`
+3. Follow the prompts to enter the required information.
+4. Optionally, add external options such as attributes (public, private, protected).
+5. Review the entered information and confirm or edit as needed.
 
-3. Grant execute permissions:
+## Script Organization
 
-```BASH
-chmod +x Process_Monitor.sh
+- **Script Variables**: Initial variables such as author name and email.
+- **Set Default Values**: Function to set default values for file name, class name, namespace, and description.
+- **Generate Header**: Function to generate the C++ header file with a predefined template.
+- **Get Data**: Function to handle external options by adding attributes based on the user's input.
+- **Generate Program**: Function to generate the C++ program file with a predefined template.
+- **Add Attributes**: Function to interactively add attributes (public, private, protected) to the class.
+- **External Options**: Function to handle user input for external options (e.g., adding attributes).
+- **Input Needed Data**: Main loop for user interaction, allowing the user to confirm or edit the entered information.
+
+## Examples
+
+Here are a few examples of using the script:
+
+- Basic Usage:
+```bash
+./cppgenerate.sh
 ```
+## Author
 
-3. Run the script with desired options:
+- Khaled El-Sayed
+- Email: @t0ti20
 
-```BASH
-./Process_Monitor.sh -l
-```
+## License
 
-4. Follow the on-screen instructions for interactive options.
+This script is provided under the MIT License.
 
-## Dependencies
-
-- This script is designed for Linux systems and may not work on other platforms.
+---
