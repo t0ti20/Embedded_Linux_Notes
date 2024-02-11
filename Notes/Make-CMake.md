@@ -240,6 +240,10 @@ add_custom_target(flash ALL
 link_directories("/user/lib/")
 #Add List
 list(APPENO SRCFILE main.cpp)
+#Find Needed Package (/usr/share/cmake-3.22/Modules)
+find_package(GTest REQUIRED) 
+#Enable CTest
+enable_testing()
 ```
 ## Common Usage
 

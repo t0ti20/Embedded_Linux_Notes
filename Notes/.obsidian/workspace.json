@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e684422c507dc3b7",
+        "id": "d827d82eaddd8765",
         "type": "tabs",
         "children": [
           {
-            "id": "df69fd756430437d",
+            "id": "869d98504603fa20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "GTest.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "GTest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "GTest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4-C++/1.Programming Language.md"
+                "file": "GTest.md"
               }
             }
           },
@@ -157,15 +157,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "df69fd756430437d",
+  "active": "ab4524b1ec272ad6",
   "lastOpenFiles": [
-    "Untitled 1.md",
-    "4-C++/1.Programming Language.md",
-    "Git Tutorial.md",
     "Make-CMake.md",
+    "GTest.md",
+    "4-C++/1.Programming Language.md",
+    "Untitled 1.md",
+    "Git Tutorial.md",
     "1-Kernal/5.Bash Script.md",
     "4-C++/2.Community Guide Lines.md",
-    "Untitled.md",
     "3-Yocto/2.Development Stage.md",
     "4-C++/C++.canvas",
     "4-C++/Overview.canvas",

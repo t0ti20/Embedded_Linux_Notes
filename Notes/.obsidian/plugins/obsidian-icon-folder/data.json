@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiSpeedtest",
       "SiCmake",
       "SiCplusplus",
       "FabObjectUngroup",
-      "IbPlay",
-      "RiSettings3Line"
+      "IbPlay"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -47,5 +47,6 @@
   "3-Yocto/2.Development Stage.md": "RiSettings3Line",
   "4-C++/1.Programming Language.md": "SiCplusplus",
   "4-C++/2.Community Guide Lines.md": "IbPlay",
-  "4-C++/3.OOP.md": "FabObjectUngroup"
+  "4-C++/3.OOP.md": "FabObjectUngroup",
+  "GTest.md": "SiSpeedtest"
 }
