@@ -1,6 +1,6 @@
 ## Steps
 
-1- Prepare C-Make
+1- **Prepare CMake**
 
 ```cmake
 #Set Version
@@ -27,7 +27,7 @@ include (GoogleTest)
 gtest_discover_tests(${Application_Name})
 ```
 
-2- Create Test Source File
+2-**Create Test Source File**
 
 ```cpp
 //Include GTest Headders
@@ -46,7 +46,7 @@ TEST(Group_1,Test_1)
 }
 ```
 
-3- Run Test And Check Result
+3- **Run Test And Check Result**
 
 ## Types Of Tests In CMake
 ### TEST
@@ -91,9 +91,43 @@ TEST_F(Math_Test,Test_4)
 ```
 ### TEST_P
 
+```cpp
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include "Company.hpp"
+
+// Define a fixture class for parameterized tests
+class MathParamTest : public testing::TestWithParam<std::tuple<int, int, int>>
+{
+public:
+    Math Calculator;
+    void SetUp() override 
+    {
+        Calculator = Math(std::get<0>(GetParam()), std::get<1>(GetParam()));
+    }
+};
+
+// Define parameters for the test cases
+INSTANTIATE_TEST_SUITE_P(MathTests, MathParamTest,
+    testing::Values(
+        std::make_tuple(1, 2, 3),   // Test case 1
+        std::make_tuple(4, 5, 9),   // Test case 2
+        std::make_tuple(-3, 6, 3)   // Test case 3
+    )
+);
+
+// Test case using TEST_P
+TEST_P(MathParamTest, AddTest) {
+    int expected = std::get<2>(GetParam());
+    EXPECT_EQ(Calculator.Add(), expected);
+}
+
+```
 ## Syntax
 
 ```cpp
+#include <gmock/gmock-matchers.h>
+#include <gtest/gtest.h>
 TEST(Test_Group,Test_Name)
 {
 #Compare Intity And Stop Test
@@ -120,6 +154,28 @@ EXPECT_STRCASENE("Ahmed","AHMED");
 using::testing::StartsWith;
 EXPECT_STREQ("Hello",StartsWith("Hello"));
 #
+}
+#######################################################
+TEST(Group_1,Test_1)
+{
+    using namespace testing;
+    std::vector<int> Output{1,2,3};
+    std::string Text{"Welcome To My Application"};
+    int *Pointer{};
+    int Value{10};
+    /*===========================================*/
+    EXPECT_THAT(Pointer,IsNull());
+    //EXPECT_THAT(Pointer,NotNull());
+    /*===========================================*/
+    EXPECT_THAT(Output,testing::ElementsAre(1,2,3));
+    /*===========================================*/
+    EXPECT_THAT(Text,StartsWith("Welcome"));
+    EXPECT_THAT(Text,MatchesRegex("[a-zA-Z ]{8}To.*"));
+    /*===========================================*/
+    EXPECT_THAT(Value,Gt(3));
+    EXPECT_THAT(Value,AllOf(Gt(9),Lt(11)));
+    /*===========================================*/
+    EXPECT_THAT(Output,Each(Lt(Value)));
 }
 ```
 ## Common Commands
