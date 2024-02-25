@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabBug",
+      "SiPluscodes",
+      "SiCookiecutter",
       "SiSpeedtest",
-      "SiCmake",
-      "SiCplusplus",
-      "FabObjectUngroup",
-      "IbPlay"
+      "SiCmake"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,10 +43,16 @@
   "2-Embedded Linux/3.Kernal.md": "SiLinux",
   "2-Embedded Linux/4.Root File System.md": "LiFiles",
   "2-Embedded Linux/5.System Initialization.md": "IbPlay",
-  "3-Yocto/1.Pre-Development.md": "LiCoffee",
-  "3-Yocto/2.Development Stage.md": "RiSettings3Line",
   "4-C++/1.Programming Language.md": "SiCplusplus",
   "4-C++/2.Community Guide Lines.md": "IbPlay",
   "4-C++/3.OOP.md": "FabObjectUngroup",
-  "GTest.md": "SiSpeedtest"
+  "GTest.md": "SiSpeedtest",
+  "3-Yocto/1.Hello World.md": "LiCoffee",
+  "3-Yocto/5.RPI-4 Image.md": "RiSettings3Line",
+  "3-Yocto/4.Debugging.md": "FabBug",
+  "3-Yocto/2.Layer Customization.md": {
+    "iconName": "SiPluscodes",
+    "inheritanceIcon": "IbGames"
+  },
+  "3-Yocto/3.Recipes.md": "SiCookiecutter"
 }
