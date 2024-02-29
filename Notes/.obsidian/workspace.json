@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d827d82eaddd8765",
+        "id": "a3c0d0353ce39c57",
         "type": "tabs",
         "children": [
           {
-            "id": "869d98504603fa20",
+            "id": "7bd64894bdbd8e60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Yocto/5.RPI-4 Image.md",
+                "file": "4-C++/1.Programming Language.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3-Yocto/5.RPI-4 Image.md",
+                "file": "4-C++/1.Programming Language.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3-Yocto/5.RPI-4 Image.md",
+                "file": "4-C++/1.Programming Language.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3-Yocto/5.RPI-4 Image.md"
+                "file": "4-C++/1.Programming Language.md"
               }
             }
           },
@@ -157,24 +157,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ab4524b1ec272ad6",
+  "active": "7bd64894bdbd8e60",
   "lastOpenFiles": [
-    "3-Yocto/1.Hello World.md",
     "3-Yocto/2.Layer Customization.md",
     "3-Yocto/5.RPI-4 Image.md",
-    "https.md",
-    "3-Yocto/3.Recipes.md",
     "3-Yocto/4.Debugging.md",
-    "Pasted image 20240219161721.png",
-    "SOME-IP.md",
+    "3-Yocto/1.Hello World.md",
+    "3-Yocto/3.Recipes.md",
     "4-C++/1.Programming Language.md",
     "4-C++/2.Community Guide Lines.md",
     "4-C++/3.OOP.md",
+    "4-C++/C++.canvas",
+    "https.md",
+    "Pasted image 20240219161721.png",
+    "SOME-IP.md",
     "GTest.md",
     "Make-CMake.md",
     "Git Tutorial.md",
     "1-Kernal/5.Bash Script.md",
-    "4-C++/C++.canvas",
     "4-C++/Overview.canvas",
     "Overview.canvas",
     "Commands.md",
@@ -197,7 +197,6 @@
     "Untitled Diagram.jpg",
     "Embedded Linux/Excalidraw/Excalidraw/Drawing 2023-10-25 09.44.48.excalidraw.md",
     "Embedded Linux/Excalidraw/Excalidraw",
-    "Reference.md",
     "Materials/Pasted image 20231014085436.png",
     "Embedded Linux/Excalidraw",
     "2-Embedded Linux",
