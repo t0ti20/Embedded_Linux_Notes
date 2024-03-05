@@ -116,3 +116,5 @@
 - `df`: Gives an overview of the filesystem disk space usage.
 - `strace`: Troubleshooting tool for tracing system calls. (-c)
 - `lsof`: Lists open files and the corresponding processes. (-p)
+- `qemu-arm`: Linux CPU emulator (compiled for arm emulation) (-L)
+- `grep`: Find patterns in files using regular expressions. (-rni)

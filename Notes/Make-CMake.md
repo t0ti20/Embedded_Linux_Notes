@@ -5,7 +5,6 @@
 **Types of Make:**
 - GNU Make
 - Borland Make
-
 ## Why Use Make
 
 1. **Organize Compilation Process:**
@@ -107,13 +106,12 @@ all :
 
 ## Make Build In Rules
 
-``` SHELL
-# Print Make INternal Database
+```shell
+#Print Make INternal Database
 make -p
-# Do not use internal database 
+#Do not use internal database 
 make <rule> -r
 ```
-
 ## Common Usage
 
 ```SHELL
@@ -126,13 +124,13 @@ build: main.o test .o
 #Change Make Default Directory
 make -C <path>
 ####################################################
-# (@)                   -hide command
-# (%.o)                 -all object files
-# $(CC)                 -replace variable
-# ($<)                  -One Dependency at time
-# ($@)                  -One Output at time
-# ($(wildcard *.c))     -all fiiles .c
-# $(CC)                 -replace variable
+#(@)                   -hide command
+#(%.o)                 -all object files
+#$(CC)                 -replace variable
+#($<)                  -One Dependency at time
+#($@)                  -One Output at time
+#($(wildcard *.c))     -all fiiles .c
+#$(CC)                 -replace variable
 ####################################################
 ####################################################
 ```
@@ -188,7 +186,7 @@ endif()
 add_subdirectory(${CMAKE_SOURCE_DIR}/Libraries)
 #Link Library
 target_link_libraries(Main PUBLIC MathLibrary)
-# Create a library add SHARED to make it dynamic
+#Create a library add SHARED to make it dynamic
 add_library(MathLibrary ${SOURCES})
 #Add Configuration File
 configure_file(Default_Config.in Default_Config.h)
@@ -255,16 +253,26 @@ MESSAGE("Hello")
 cmake -G
 #Show All Variables 
 cmake --help-variable-list
-${CMAKE_SOURCE_DIR}#Main Cmake Source Directory
-${CMAKE_CURRENT_SOURCE_DIR}#Current Includded Cmake Source Directory
-${CMAKE_BINARY_DIR}#Main Cmake Build Directory
-${CMAKE_CURRENT_BINARY_DIR}#Current Includded Cmake Build Directory
-${CMAKE_GENERARTOR}#Target Makefile Application
-${CMAKE_SYSTEM_NAME}#Set To Genaric For Cross Compile
-${CMAKE_CXX_COMPILER}#Set Default CPP Compiler Used
-${CMAKE_C_COMPILER}#Set Default C Compiler Used
-${CMAKE_OBJCOPY_COMPILER}#Set Default Objcopy Compiler Used
-${CMAKE_CXX_FLAGS}#Pass Flags CPP To Compiler
+#Main Cmake Source Directory
+${CMAKE_SOURCE_DIR}
+#Current Includded Cmake Source Directory
+${CMAKE_CURRENT_SOURCE_DIR}
+#Main Cmake Build Directory
+${CMAKE_BINARY_DIR}
+#Current Includded Cmake Build Directory
+${CMAKE_CURRENT_BINARY_DIR}
+#Target Makefile Application
+${CMAKE_GENERARTOR}
+#Set To Genaric For Cross Compile
+${CMAKE_SYSTEM_NAME}
+#Set Default CPP Compiler Used
+${CMAKE_CXX_COMPILER}
+#Set Default C Compiler Used
+${CMAKE_C_COMPILER}
+#Set Default Objcopy Compiler Used
+${CMAKE_OBJCOPY_COMPILER}
+#Pass Flags CPP To Compiler
+${CMAKE_CXX_FLAGS}
 #Set Important Variables
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -296,7 +304,48 @@ Print_Hello(3)
 file(GLOB_RECURSE SRC_FILES "./Source/*.cpp")
 file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_SOURCE_DIR} "./Source/*.cpp")
 ```
+## Cross Compiling
+
+```bash
+####################################
+#.cmake file
+####################################
+#Set Name
+set(CMAKE_SYSTEM_NAME Linux)
+#Set Arch
+set(CMAKE_SYSTEM_PROCESSOR arm)
+#Set Root-fs(includes and libs)
+set(CMAKE_SYSROOT /home/devel/rasp-pi-rootfs)
+#Extra Paths For Compiler
+set(CMAKE_STAGING_PREFIX /home/devel/stage)
+#Set C Compiler
+set(CMAKE_C_COMPILER ${tools}/bin/arm-linux-gnueabihf-gcc)
+#Set C++ Compiler
+set(CMAKE_CXX_COMPILER ${tools}/bin/arm-linux-gnueabihf-g++)
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+####################################
+#CMakeLists.txt
+####################################
+#Set Version
+cmake_minimum_required(VERSION 3.22)
+#Set Project Name  
+PROJECT(Test_CPP VERSION 22.22)
+####################
+#Include Cross Compiling Cmake
+INCLUDE(<cmake_path.cmake>)
+#OR
+#Add Your Module Path
+SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/<path_to_folder>)
+INCLUDE(<Module_Name>)
+####################
+#Add Executable
+add_executable(${PROJECT_NAME} main.cpp)
+```
 # References:
 
-1- [GNU `make` Manual](https://www.gnu.org/software/make/manual/html_node/index.html)
-2- [GNU `cmake` Manual](https://cmake.org/cmake/help/latest/index.html)
+## 1- [GNU `make` Manual](https://www.gnu.org/software/make/manual/html_node/index.html)
+## 2- [GNU `cmake` Manual](https://cmake.org/cmake/help/latest/index.html)
+## 3- [Cross Compiling](https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html)
