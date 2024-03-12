@@ -304,7 +304,7 @@ Print_Hello(3)
 file(GLOB_RECURSE SRC_FILES "./Source/*.cpp")
 file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_SOURCE_DIR} "./Source/*.cpp")
 ```
-## Cross Compiling
+## Create .CMake File For Cross Compiling
 
 ```bash
 ####################################
@@ -344,6 +344,81 @@ INCLUDE(<Module_Name>)
 #Add Executable
 add_executable(${PROJECT_NAME} main.cpp)
 ```
+
+# Packages
+
+## Create Package
+
+```bash
+# Building Message
+message(STATUS "================== Building Library ==================")
+# Select Minimum Version
+cmake_minimum_required(VERSION 3.12)
+# Specify Project Name
+project(Mathlib VERSION 1.0)
+# Set Library Name
+set(Package_Name MyPackage)
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Add library source files
+file(GLOB_RECURSE SOURCES "Source/*.c" "Source/*.cpp")
+# Building Message
+message(STATUS "Files To Be Compiled : ${SOURCES}")
+# Create a library
+add_library(${PROJECT_NAME} SHARED ${SOURCES})
+# Install Library CMake File
+install(TARGETS ${PROJECT_NAME} EXPORT ${Package_Name} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+# Edit Default Find<name>cmake Location
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
+# Install CMake File
+install(EXPORT ${Package_Name} FILE "Find${Package_Name}.cmake" DESTINATION ${CMAKE_MODULE_PATH})
+# Specify include directories for the library
+include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Include)
+#target_include_directories(${PROJECT_NAME} INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:include>)
+# Building Message
+message(STATUS "================ Library Build Finish ================")
+```
+
+## Use Package
+
+```bash
+#Building Message
+message(STATUS "================== Building Application ==================")
+#Set Version
+cmake_minimum_required(VERSION 3.22)
+#Set Project Name   
+project(Test_CPP VERSION 22.22)
+#Set CPP Standard
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+#Locate Source Files
+file(GLOB_RECURSE SOURCES ${CMAKE_CURRENT_SOURCE_DIR} "Source/*.c" "Source/*.cpp")
+#Building Message
+message(STATUS "Files To Be Compiled : ${SOURCES}")
+#Edit In Default Location of .cmake files
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Libraries/CMake")
+#Find Custom Package I Made
+find_package(MyPackage REQUIRED)
+#Add Executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+#Link Math Library in My_Library Package
+target_link_libraries(${PROJECT_NAME} PRIVATE Mathlib)
+#Otain Include Feature
+get_target_property(LIBRARY_INCLUDES Mathlib INCLUDES)
+# Specify include directories
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/Include/ ${LIBRARY_INCLUDES})
+#Building Message
+message(STATUS "================ Application Build Finish ================")
+```
+
+## Configure Include Property
+
+```bash
+#In Configure Generated CMake File append
+set_target_properties(Mathlib PROPERTIES INCLUDES <includePath>)
+```
+
 # References:
 
 ## 1- [GNU `make` Manual](https://www.gnu.org/software/make/manual/html_node/index.html)
