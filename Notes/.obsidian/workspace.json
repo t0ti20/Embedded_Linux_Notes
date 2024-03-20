@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "2-Embedded Linux/5.System Initialization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1f7ee1a4400133e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Kernal/5.Bash Script.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "51bc8c729562b45c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "2-Embedded Linux/5.System Initialization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4-C++/1.Programming Language.md",
+                "file": "2-Embedded Linux/5.System Initialization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4-C++/1.Programming Language.md"
+                "file": "2-Embedded Linux/5.System Initialization.md"
               }
             }
           },
@@ -157,32 +181,33 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ab4524b1ec272ad6",
+  "active": "af108c475834e16f",
   "lastOpenFiles": [
+    "1-Kernal/5.Bash Script.md",
+    "2-Embedded Linux/5.System Initialization.md",
+    "4-C++/1.Programming Language.md",
+    "Commands.md",
+    "Materials/Pasted image 20240317105102.png",
+    "2-Embedded Linux/4.Root File System.md",
+    "3-Yocto/2.Layer Customization.md",
+    "3-Yocto/5.RPI-4 Image.md",
+    "3-Yocto/1.Hello World.md",
     "4-C++/2.Community Guide Lines.md",
     "Make-CMake.md",
-    "3-Yocto/5.RPI-4 Image.md",
-    "3-Yocto/2.Layer Customization.md",
-    "3-Yocto/1.Hello World.md",
     "2-Embedded Linux/1.Tool Chain.md",
-    "4-C++/1.Programming Language.md",
     "GTest.md",
-    "Commands.md",
     "Overview.canvas",
-    "1-Kernal/5.Bash Script.md",
     "4-C++/C++.canvas",
     "3-Yocto/3.Recipes.md",
     "3-Yocto/4.Debugging.md",
     "Git Tutorial.md",
     "4-C++/3.OOP.md",
     "https.md",
-    "Pasted image 20240219161721.png",
+    "Materials/Pasted image 20240219161721.png",
     "SOME-IP.md",
     "4-C++/Overview.canvas",
     "Pasted image 20231229103937.png",
-    "2-Embedded Linux/4.Root File System.md",
     "4-C++",
-    "2-Embedded Linux/5.System Initialization.md",
     "1-Kernal/4.User Management Stack.md",
     "2-Embedded Linux/2.Bootloader.md",
     "1-Kernal/3.File System Stack.md",
@@ -207,7 +232,6 @@
     "Kernal/0-Overview",
     "Materials/Pasted image 20231006094219.png",
     "Pasted image 20231006092254.png",
-    "Pasted image 20231006092258.png",
     "Stacks/Stacks",
     "Stacks/Untitled"
   ]

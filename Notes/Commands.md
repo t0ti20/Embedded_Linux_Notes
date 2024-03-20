@@ -118,3 +118,5 @@
 - `lsof`: Lists open files and the corresponding processes. (-p)
 - `qemu-arm`: Linux CPU emulator (compiled for arm emulation) (-L)
 - `grep`: Find patterns in files using regular expressions. (-rni)
+- `realpath`: Display the resolved absolute path for a file or directory.
+- `nproc`: Print the number of processing units (normally CPUs) available.
