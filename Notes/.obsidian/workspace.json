@@ -4,46 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "c9e19a1e5cd9abd0",
+        "id": "cf70ef3aa07c2ca6",
         "type": "tabs",
         "children": [
           {
-            "id": "af108c475834e16f",
+            "id": "fa518436d6d4b46b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "2-Embedded Linux/5.System Initialization.md",
-                "mode": "source",
-                "source": false
+                "file": "Overview.canvas",
+                "viewState": {
+                  "x": 2397.6135285229607,
+                  "y": 1030.789784965517,
+                  "zoom": -1.489108471920102
+                }
               }
             }
           },
           {
-            "id": "1f7ee1a4400133e2",
+            "id": "a4fc7016a1f43518",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Kernal/5.Bash Script.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "51bc8c729562b45c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Commands.md",
+                "file": "5-Device Driver.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2-Embedded Linux/5.System Initialization.md",
+                "file": "5-Device Driver.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2-Embedded Linux/5.System Initialization.md",
+                "file": "5-Device Driver.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2-Embedded Linux/5.System Initialization.md"
+                "file": "5-Device Driver.md"
               }
             }
           },
@@ -181,30 +173,31 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "af108c475834e16f",
+  "active": "ab4524b1ec272ad6",
   "lastOpenFiles": [
-    "1-Kernal/5.Bash Script.md",
+    "SOME-IP.md",
+    "5-Device Driver.md",
+    "Overview.canvas",
     "2-Embedded Linux/5.System Initialization.md",
+    "4-C++/2.Community Guide Lines.md",
     "4-C++/1.Programming Language.md",
+    "3-Yocto/2.Layer Customization.md",
+    "4-C++/3.OOP.md",
+    "4-C++/C++.canvas",
     "Commands.md",
+    "1-Kernal/5.Bash Script.md",
+    "Make-CMake.md",
+    "3-Yocto/3.Recipes.md",
     "Materials/Pasted image 20240317105102.png",
     "2-Embedded Linux/4.Root File System.md",
-    "3-Yocto/2.Layer Customization.md",
     "3-Yocto/5.RPI-4 Image.md",
     "3-Yocto/1.Hello World.md",
-    "4-C++/2.Community Guide Lines.md",
-    "Make-CMake.md",
     "2-Embedded Linux/1.Tool Chain.md",
     "GTest.md",
-    "Overview.canvas",
-    "4-C++/C++.canvas",
-    "3-Yocto/3.Recipes.md",
     "3-Yocto/4.Debugging.md",
     "Git Tutorial.md",
-    "4-C++/3.OOP.md",
     "https.md",
     "Materials/Pasted image 20240219161721.png",
-    "SOME-IP.md",
     "4-C++/Overview.canvas",
     "Pasted image 20231229103937.png",
     "4-C++",
@@ -220,7 +213,6 @@
     "2023-10-26.md",
     "Materials/Untitled Diagram.drawio.png",
     "Untitled Diagram.jpg",
-    "Embedded Linux/Excalidraw/Excalidraw/Drawing 2023-10-25 09.44.48.excalidraw.md",
     "Embedded Linux/Excalidraw/Excalidraw",
     "Materials/Pasted image 20231014085436.png",
     "Embedded Linux/Excalidraw",

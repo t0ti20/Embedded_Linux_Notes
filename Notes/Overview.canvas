@@ -9,6 +9,7 @@
 		{"id":"0eb777add535511e","type":"file","file":"Commands.md","x":2330,"y":-400,"width":560,"height":560,"color":"4"},
 		{"id":"ad50fdf54e646ba3","type":"text","text":"# 🖥️ Embedded Linux \n\nThe primary objective is to create a Linux image that can run on a target. There are two methodologies for achieving this:\n\n1. **Manual Method**: Manually collect the image, toolchain, Linux image, bootloader, etc.\n2. **Build System Method**: Utilize systems like Yocto or BuildRoot.\n\nThe anticipated hierarchy of the output from these methods would be:\n`1. Application `\n`2. C library `\n`3. Kernel `\n`4. Device Driver `\n`5. Target Hardware`\n\nTo execute This Build, you need to collect and compile these components:\n`1. Toolchain`\n`2. Bootloader`\n`3. Kernel`\n`4. Root filesystem`\n`5. Application`\n   ","x":1280,"y":1740,"width":2660,"height":580,"color":"6"},
 		{"id":"d00391c3264904ca","type":"text","text":"## 1. Manual Build","x":1720,"y":2620,"width":380,"height":100,"color":"5"},
+		{"id":"2d1500ccdef4e7b3","type":"file","file":"4-C++/C++.canvas","x":3150,"y":-400,"width":560,"height":560,"color":"4"},
 		{"id":"04f0dc0bcec88785","type":"text","text":"# Hardware","x":1510,"y":1400,"width":2200,"height":60,"color":"1"},
 		{"id":"456304889a7f0a96","type":"file","file":"1-Kernal/2.Network Stack.md","x":2070,"y":560,"width":480,"height":520,"color":"#000000"},
 		{"id":"adcd7a261ff8b393","type":"file","file":"1-Kernal/3.File System Stack.md","x":2670,"y":560,"width":480,"height":520,"color":"#000000"},
@@ -16,14 +17,13 @@
 		{"id":"ec75ff4ea7c8e661","type":"text","text":"# Device Driver","x":1510,"y":1240,"width":2200,"height":60,"color":"5"},
 		{"id":"4fd1db726f434833","type":"text","text":"## 2. YOCTO","x":3099,"y":2620,"width":380,"height":100,"color":"4"},
 		{"id":"64acfddef1eee9f9","type":"file","file":"2-Embedded Linux/5.System Initialization.md","x":1446,"y":2920,"width":928,"height":960,"color":"5"},
+		{"id":"3e6981e93b786f12","type":"file","file":"1-Kernal/4.User Management Stack.md","x":3230,"y":560,"width":480,"height":520,"color":"#000000"},
+		{"id":"30a69f83f86ace3e","type":"file","file":"2-Embedded Linux/4.Root File System.md","x":1446,"y":4000,"width":928,"height":960,"color":"5"},
+		{"id":"12ac5efb0c5d4126","type":"file","file":"2-Embedded Linux/3.Kernal.md","x":1446,"y":5080,"width":928,"height":960,"color":"5"},
 		{"id":"10b0de83e59ecc1b","type":"file","file":"2-Embedded Linux/2.Bootloader.md","x":1446,"y":6160,"width":928,"height":960,"color":"5"},
 		{"id":"933e8f8ac62523d7","type":"file","file":"2-Embedded Linux/1.Tool Chain.md","x":1446,"y":7240,"width":928,"height":960,"color":"5"},
 		{"id":"11ac36bb3a2f91ab","type":"file","file":"3-Yocto/1.Hello World.md","x":2825,"y":2920,"width":928,"height":960,"color":"4"},
-		{"id":"3e6981e93b786f12","type":"file","file":"1-Kernal/4.User Management Stack.md","x":3230,"y":560,"width":480,"height":520,"color":"#000000"},
-		{"id":"e0a57f717f4c88f7","type":"file","file":"3-Yocto/5.RPI-4 Image.md","x":2825,"y":4000,"width":928,"height":2040,"color":"4"},
-		{"id":"30a69f83f86ace3e","type":"file","file":"2-Embedded Linux/4.Root File System.md","x":1446,"y":4000,"width":928,"height":960,"color":"5"},
-		{"id":"12ac5efb0c5d4126","type":"file","file":"2-Embedded Linux/3.Kernal.md","x":1446,"y":5080,"width":928,"height":960,"color":"5"},
-		{"id":"2d1500ccdef4e7b3","type":"file","file":"4-C++/C++.canvas","x":3150,"y":-400,"width":560,"height":560,"color":"4"}
+		{"id":"e0a57f717f4c88f7","type":"file","file":"3-Yocto/5.RPI-4 Image.md","x":2825,"y":4000,"width":928,"height":2040,"color":"4"}
 	],
 	"edges":[
 		{"id":"b358400e25bd1597","fromNode":"d21cf1e28023eae8","fromSide":"bottom","toNode":"67bceb56b5df982f","toSide":"top","color":"#000000"},
