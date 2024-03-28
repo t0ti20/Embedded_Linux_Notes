@@ -218,21 +218,20 @@ module_exit(LED_Exit);
 
 ```c
 /* Define Buffer Size */
-#define READ_BUFFER_SIZE 255
+#define BUFFER_SIZE 255
 /* Initialize Reading Buffer */
-static unsigned char Read_Buffer[READ_BUFFER_SIZE]="LED Value = ";
-
-
+static unsigned char File_Buffer[BUFFER_SIZE]="Hello World !\n";
 /* Read Call Function */
-ssize_t Read_Device_File(struct file *Device_File,char __user *User_Data,size_t Read_Bytes_Count,loff_t *Offset)
+ssize_t Read_Device_File(struct file *Device_File,char __user *User_Buffer,size_t Read_Bytes_Count,loff_t *Offset)
 {
     ssize_t Return=0;
-    printk("Reading Data From File\n");
+    printk("Reading Data From File (Bytes=%ld | Offset=%lld)\n",Read_Bytes_Count,*Offset);
     /* Check For Read Count Size */
-    if((Read_Bytes_Count+Offset)>READ_BUFFER_SIZE){Read_Bytes_Count=READ_BUFFER_SIZE-*Offset;}
+    if((Read_Bytes_Count+*Offset)>BUFFER_SIZE){Read_Bytes_Count=BUFFER_SIZE-*Offset;}
     /* Copy From Physical Address To Logical Address */
-    if(copy_to_user(User_Data,&Read_Buffer[*Offset],Read_Bytes_Count)==0)
+    if(copy_to_user(User_Buffer,&File_Buffer[*Offset],Read_Bytes_Count)==0)
     {
+        Return=Read_Bytes_Count;
         printk("Data has Readded Successfully\n");
     }
     else
@@ -240,12 +239,51 @@ ssize_t Read_Device_File(struct file *Device_File,char __user *User_Data,size_t 
         Return=-1;
         printk("Can't Read Whole File\n");
     }
+    *Offset=Read_Bytes_Count;
     return Return;
 }
-
 /* File Call Operation */
-struct file_operations Led_File ={.owner=THIS_MODULE,.open=Open_Device_File,.release=CLose_Device_File,.read=Read_Device_File};
+struct file_operations Led_File ={.owner=THIS_MODULE,.open=Open_Device_File,.release=CLose_Device_File,.read=Read_Device_File,.write=Write_Device_File};
+```
+## Write To File
 
+```c
+/* Define Buffer Size */
+#define BUFFER_SIZE 255
+/* Initialize Reading Buffer */
+static unsigned char File_Buffer[BUFFER_SIZE]="Hello World !\n";
+/* Write Call Function */
+ssize_t Write_Device_File(struct file *Device_File,const char *User_Buffer,size_t Write_Bytes_Count,loff_t *Offset)
+{
+    ssize_t Return=0;
+    printk("Writing Data To File (Bytes=%ld | Offset=%lld)\n",Write_Bytes_Count,*Offset);
+    /* Check For Write Count Size */
+    if((Write_Bytes_Count+*Offset)>BUFFER_SIZE){Write_Bytes_Count=BUFFER_SIZE-*Offset;}
+    if(Write_Bytes_Count!=0)
+    {
+        /* Copy From Physical Address To Logical Address */
+        if(copy_from_user(&File_Buffer[*Offset],User_Buffer,Write_Bytes_Count)==0)
+        {
+            Return=Write_Bytes_Count;
+            *Offset=Write_Bytes_Count;
+            printk("Data has Written Successfully\n");
+        }
+        else
+        {
+            Return=-1;
+            printk("Can't Write All Data\n");
+        }
+    }
+    else
+    {
+        printk("No Space To Write\n");
+        File_Buffer[BUFFER_SIZE-1]='\n';
+        Return=-1;
+    }
+    return Return;
+}
+/* File Call Operation */
+struct file_operations Led_File ={.owner=THIS_MODULE,.open=Open_Device_File,.release=CLose_Device_File,.read=Read_Device_File,.write=Write_Device_File};
 ```
 ## Commands
 
