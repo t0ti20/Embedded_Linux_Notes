@@ -1,0 +1,1 @@
+## 1- [Use Yocto SDK](https://www.ezurio.com/resources/software-announcements/how-to-create-and-use-the-yocto-sdk)

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-C++/3.OOP.md",
+                "file": "3-Yocto/6-SDK.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4-C++/3.OOP.md",
+                "file": "3-Yocto/6-SDK.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4-C++/3.OOP.md",
+                "file": "3-Yocto/6-SDK.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4-C++/3.OOP.md"
+                "file": "3-Yocto/6-SDK.md"
               }
             }
           },
@@ -157,28 +157,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ab4524b1ec272ad6",
+  "active": "fa518436d6d4b46b",
   "lastOpenFiles": [
+    "3-Yocto/2.Layer Customization.md",
+    "3-Yocto/3.Recipes.md",
+    "3-Yocto/4.Debugging.md",
+    "3-Yocto/5.RPI-4 Image.md",
+    "3-Yocto/6-SDK.md",
+    "Make-CMake.md",
+    "5-Device Driver.md",
+    "4-C++/3.OOP.md",
     "4-C++/1.Programming Language.md",
     "4-C++/2.Community Guide Lines.md",
-    "5-Device Driver.md",
     "Overview.canvas",
-    "4-C++/3.OOP.md",
     "SOME-IP.md",
     "2-Embedded Linux/5.System Initialization.md",
-    "3-Yocto/2.Layer Customization.md",
     "4-C++/C++.canvas",
     "Commands.md",
     "1-Kernal/5.Bash Script.md",
-    "Make-CMake.md",
-    "3-Yocto/3.Recipes.md",
     "Materials/Pasted image 20240317105102.png",
     "2-Embedded Linux/4.Root File System.md",
-    "3-Yocto/5.RPI-4 Image.md",
     "3-Yocto/1.Hello World.md",
     "2-Embedded Linux/1.Tool Chain.md",
     "GTest.md",
-    "3-Yocto/4.Debugging.md",
     "Git Tutorial.md",
     "https.md",
     "Materials/Pasted image 20240219161721.png",

@@ -303,6 +303,8 @@ Print_Hello(3)
 #Search For CPP Files
 file(GLOB_RECURSE SRC_FILES "./Source/*.cpp")
 file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_SOURCE_DIR} "./Source/*.cpp")
+#CMake based applications using the SDK
+set(CMAKE_TOOLCHAIN_FILE $ENV{OE_CMAKE_TOOLCHAIN_FILE})
 ```
 ## Create .CMake File For Cross Compiling
 
@@ -349,30 +351,30 @@ add_executable(${PROJECT_NAME} main.cpp)
 ## Create Package
 
 ```bash
-# Building Message
+#Building Message
 message(STATUS "================== Building Library ==================")
-# Select Minimum Version
+#Select Minimum Version
 cmake_minimum_required(VERSION 3.12)
-# Specify Project Name
+#Specify Project Name
 project(Mathlib VERSION 1.0)
-# Set Library Name
+#Set Library Name
 set(Package_Name MyPackage)
-# Set C++ standard
+#Set C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-# Add library source files
+#Add library source files
 file(GLOB_RECURSE SOURCES "Source/*.c" "Source/*.cpp")
-# Building Message
+#Building Message
 message(STATUS "Files To Be Compiled : ${SOURCES}")
-# Create a library
+#Create a library
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
-# Install Library CMake File
+#Install Library CMake File
 install(TARGETS ${PROJECT_NAME} EXPORT ${Package_Name} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-# Edit Default Find<name>cmake Location
+#Edit Default Find<name>cmake Location
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
-# Install CMake File
+#Install CMake File
 install(EXPORT ${Package_Name} FILE "Find${Package_Name}.cmake" DESTINATION ${CMAKE_MODULE_PATH})
-# Specify include directories for the library
+#Specify include directories for the library
 include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Include)
 #target_include_directories(${PROJECT_NAME} INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:include>)
 # Building Message
@@ -405,7 +407,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE Mathlib)
 #Otain Include Feature
 get_target_property(LIBRARY_INCLUDES Mathlib INCLUDES)
-# Specify include directories
+#Specify include directories
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/Include/ ${LIBRARY_INCLUDES})
 #Building Message
 message(STATUS "================ Application Build Finish ================")

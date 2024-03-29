@@ -285,6 +285,19 @@ ssize_t Write_Device_File(struct file *Device_File,const char *User_Buffer,size_
 /* File Call Operation */
 struct file_operations Led_File ={.owner=THIS_MODULE,.open=Open_Device_File,.release=CLose_Device_File,.read=Read_Device_File,.write=Write_Device_File};
 ```
+## GPIO Example
+### Manual
+
+```bash
+#Make Pin Object
+echo <bin_number> > /sys/class/gpio/export
+#Set direction
+echo <direction> > /sys/class/gpio<bin_number>/direction
+#Set State
+echo <state> > /sys/class/gpio<bin_number>/value
+#Release GRIO
+echo <bin_number> > /sys/class/gpio/unexport
+```
 ## Commands
 
 ```bash
