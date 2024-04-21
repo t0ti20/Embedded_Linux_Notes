@@ -78,7 +78,8 @@ git reset
 # Reset your repo, discarding certain changes.
 ```
 
-- **Reset local git repository to same like remote**
+- **Reset local git repository to same like remote
+
 ```SHELL
 git fetch origin
 # First, get latest changes from the remote
@@ -86,3 +87,8 @@ git reset --hard origin/master
 # Second, hard reset the branch.
 git clean -d -f -x 
 # Last step is to remove all the untracked files (-f) and directories (-d), plus ignored files (-x).
+```
+
+```bash
+git submodule add -b master --name Host_Bootloader https://github.com/t0ti20/CPP_Application
+```

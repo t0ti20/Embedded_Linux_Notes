@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cf70ef3aa07c2ca6",
+        "id": "479bf41eccc664b3",
         "type": "tabs",
         "children": [
           {
-            "id": "fa518436d6d4b46b",
+            "id": "e4998feb80a94b9d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Yocto/3.Recipes.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3-Yocto/3.Recipes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3-Yocto/3.Recipes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3-Yocto/3.Recipes.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,30 +149,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ab4524b1ec272ad6",
+  "active": "e4998feb80a94b9d",
   "lastOpenFiles": [
-    "4-C++/3.OOP.md",
+    "Overview.canvas",
+    "4-C++/1.Programming Language.md",
+    "Untitled.md",
+    "Project.md",
+    "Commands.md",
+    "4-C++/C++.canvas",
+    "Make-CMake.md",
+    "Git Tutorial.md",
     "5-Device Driver.md",
+    "Materials/Diagram.svg",
+    "Materials/Diagram.svg.xml",
+    "4-C++/3.OOP.md",
     "3-Yocto/3.Recipes.md",
     "3-Yocto/2.Layer Customization.md",
     "3-Yocto/6-SDK.md",
     "3-Yocto/4.Debugging.md",
     "3-Yocto/5.RPI-4 Image.md",
-    "Make-CMake.md",
-    "4-C++/1.Programming Language.md",
     "4-C++/2.Community Guide Lines.md",
-    "Overview.canvas",
     "SOME-IP.md",
     "2-Embedded Linux/5.System Initialization.md",
-    "4-C++/C++.canvas",
-    "Commands.md",
     "1-Kernal/5.Bash Script.md",
     "Materials/Pasted image 20240317105102.png",
     "2-Embedded Linux/4.Root File System.md",
     "3-Yocto/1.Hello World.md",
     "2-Embedded Linux/1.Tool Chain.md",
     "GTest.md",
-    "Git Tutorial.md",
     "https.md",
     "Materials/Pasted image 20240219161721.png",
     "4-C++/Overview.canvas",
@@ -189,13 +185,10 @@
     "1-Kernal/4.User Management Stack.md",
     "2-Embedded Linux/2.Bootloader.md",
     "1-Kernal/3.File System Stack.md",
-    "1-Kernal/1.Process Stack & System Calls.md",
-    "2-Embedded Linux/3.Kernal.md",
     "3-Yocto",
     "Kernal/0-Kernal.canvas",
     "Embedded Linux/0-Embedded Linux.canvas",
     "Untitled.canvas",
-    "2023-10-26.md",
     "Materials/Untitled Diagram.drawio.png",
     "Untitled Diagram.jpg",
     "Embedded Linux/Excalidraw/Excalidraw",
@@ -208,8 +201,6 @@
     "Materials",
     "Kernal/0-Overview",
     "Materials/Pasted image 20231006094219.png",
-    "Pasted image 20231006092254.png",
-    "Stacks/Stacks",
-    "Stacks/Untitled"
+    "Stacks/Stacks"
   ]
 }
